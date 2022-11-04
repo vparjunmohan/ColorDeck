@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ColorDeckViewController.swift
 //  Color Deck
 //
 //  Created by Arjun Mohan on 05/11/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ColorDeckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     func addSwipeView() -> UIView {
         let swipeView = UIView()
         let color = UIColor.random()
+        let hexCode = hexStringFromColor(color: color)
+        print(hexCode)
         let viewHeight = 350.0
         let viewWidth = 250.0
         let defaults = UserDefaults.standard
@@ -123,4 +125,14 @@ extension UIView {
     }
 }
 
+func hexStringFromColor(color: UIColor) -> String {
+    let components = color.cgColor.components
+    let r: CGFloat = components?[0] ?? 0.0
+    let g: CGFloat = components?[1] ?? 0.0
+    let b: CGFloat = components?[2] ?? 0.0
+
+    let hexString = String.init(format: "#%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
+    
+    return hexString
+ }
 
