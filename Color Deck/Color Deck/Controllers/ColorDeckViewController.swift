@@ -9,20 +9,30 @@ import UIKit
 
 class ColorDeckViewController: UIViewController {
     
+    @IBOutlet weak var hexLabel: UILabel!
+    @IBOutlet weak var favoriteView: UIView!
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
         view.addSubview(addSwipeView())
         
+    }
+    
+
+    @IBAction func favoriteButtonClicked(_ sender: UIButton) {
+        print("clicked")
     }
     
     func addSwipeView() -> UIView {
         let swipeView = UIView()
         let color = UIColor.random()
         let hexCode = hexStringFromColor(color: color)
-        print(hexCode)
         let viewHeight = 350.0
         let viewWidth = 250.0
+        hexLabel.text = hexCode
         let defaults = UserDefaults.standard
         if let viewTag = defaults.object(forKey: "viewTag") as? Int {
             swipeView.tag = viewTag
@@ -97,42 +107,3 @@ class ColorDeckViewController: UIViewController {
         }
     }
 }
-
-extension CGFloat {
-    static func random() -> CGFloat {
-        return CGFloat(arc4random()) / CGFloat(UInt32.max)
-    }
-}
-
-extension UIColor {
-    static func random() -> UIColor {
-        return UIColor(
-            red:   .random(),
-            green: .random(),
-            blue:  .random(),
-            alpha: 1.0
-        )
-    }
-}
-
-extension UIView {
-    func applyCommonDropShadow(radius:CGFloat, opacity: Float) {
-        layer.shadowOffset = CGSize(width: -1, height: 1)
-        layer.shadowRadius = radius
-        layer.shadowOpacity = opacity
-        layer.borderColor = UIColor.black.cgColor
-        clipsToBounds = false
-    }
-}
-
-func hexStringFromColor(color: UIColor) -> String {
-    let components = color.cgColor.components
-    let r: CGFloat = components?[0] ?? 0.0
-    let g: CGFloat = components?[1] ?? 0.0
-    let b: CGFloat = components?[2] ?? 0.0
-
-    let hexString = String.init(format: "#%02lX%02lX%02lX", lroundf(Float(r * 255)), lroundf(Float(g * 255)), lroundf(Float(b * 255)))
-    
-    return hexString
- }
-
