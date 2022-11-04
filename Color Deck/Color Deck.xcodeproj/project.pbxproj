@@ -99,12 +99,11 @@
 		DE0F62652915A6C3004E45DF /* Color Deck */ = {
 			isa = PBXGroup;
 			children = (
-				DE0F62662915A6C3004E45DF /* AppDelegate.swift */,
-				DE0F62682915A6C3004E45DF /* SceneDelegate.swift */,
-				DE0F626A2915A6C3004E45DF /* ViewController.swift */,
-				DE0F626C2915A6C3004E45DF /* Main.storyboard */,
-				DE0F626F2915A6C4004E45DF /* Assets.xcassets */,
-				DE0F62712915A6C4004E45DF /* LaunchScreen.storyboard */,
+				DE0F62962915B0BD004E45DF /* General */,
+				DE0F629A2915B16B004E45DF /* Extensions */,
+				DE0F62972915B0CC004E45DF /* Controllers */,
+				DE0F62982915B0DA004E45DF /* Storyboards */,
+				DE0F62992915B0EB004E45DF /* Resources */,
 				DE0F62742915A6C4004E45DF /* Info.plist */,
 			);
 			path = "Color Deck";
@@ -125,6 +124,47 @@
 				DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */,
 			);
 			path = "Color DeckUITests";
+			sourceTree = "<group>";
+		};
+		DE0F62962915B0BD004E45DF /* General */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F62662915A6C3004E45DF /* AppDelegate.swift */,
+				DE0F62682915A6C3004E45DF /* SceneDelegate.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		DE0F62972915B0CC004E45DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F626A2915A6C3004E45DF /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DE0F62982915B0DA004E45DF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F626C2915A6C3004E45DF /* Main.storyboard */,
+				DE0F62712915A6C4004E45DF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DE0F62992915B0EB004E45DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F626F2915A6C4004E45DF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DE0F629A2915B16B004E45DF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
