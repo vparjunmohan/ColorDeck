@@ -48,12 +48,6 @@ func hexStringFromColor(color: UIColor) -> String {
 
 extension ColorDeckViewController {
     func setupUI(){
-        favoriteButton.tintColor = ColorConstants.favoriteButtonColor
-        favoriteButton.setImage(UIImage(named: "favorite"), for: .normal)
-//        favoriteView.layer.cornerRadius = 20
-//        favoriteView.layer.borderWidth = 1
-//        favoriteView.layer.borderColor = ColorConstants.favoriteButtonColor.cgColor
-        favoriteView.backgroundColor = .white
         hexLabel.text = ""
     }
 }

@@ -16,49 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPZ-xC-NK7">
-                                <rect key="frame" x="0.0" y="788" width="393" height="30"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aP9-IG-aD2">
-                                        <rect key="frame" x="176.66666666666666" y="-20" width="40" height="40"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZB-Vj-7bN">
-                                                <rect key="frame" x="2.3333333333333428" y="5" width="35" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="35" id="nhX-k0-WGI"/>
-                                                    <constraint firstAttribute="height" constant="30" id="vLF-UP-UEh"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title=""/>
-                                                <connections>
-                                                    <action selector="favoriteButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h0r-Zj-GL7"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstItem="6ZB-Vj-7bN" firstAttribute="centerY" secondItem="aP9-IG-aD2" secondAttribute="centerY" id="34i-g8-Kkx"/>
-                                            <constraint firstAttribute="width" constant="40" id="5X6-gr-KoY"/>
-                                            <constraint firstAttribute="height" constant="40" id="o9b-Wj-i0P"/>
-                                            <constraint firstItem="6ZB-Vj-7bN" firstAttribute="centerX" secondItem="aP9-IG-aD2" secondAttribute="centerX" id="tz9-v4-Y08"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Y8s-o5-Ffq"/>
-                                    <constraint firstItem="aP9-IG-aD2" firstAttribute="top" secondItem="BPZ-xC-NK7" secondAttribute="top" constant="-20" id="YvI-7j-jU0"/>
-                                    <constraint firstItem="aP9-IG-aD2" firstAttribute="centerX" secondItem="BPZ-xC-NK7" secondAttribute="centerX" id="cvW-Um-n91"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#00000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9l-xz-qMN">
-                                <rect key="frame" x="90" y="738" width="52" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ma-3g-N88">
+                                <rect key="frame" x="85" y="738" width="70" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ma-3g-N88">
-                                <rect key="frame" x="10" y="738" width="70" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#00000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9l-xz-qMN">
+                                <rect key="frame" x="230" y="738" width="52" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,19 +33,8 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="BPZ-xC-NK7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Fq0-KZ-NLt"/>
-                            <constraint firstItem="BPZ-xC-NK7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GKi-qX-b1a"/>
-                            <constraint firstItem="Z9l-xz-qMN" firstAttribute="leading" secondItem="8Ma-3g-N88" secondAttribute="trailing" constant="10" id="L2s-bz-RhD"/>
-                            <constraint firstItem="BPZ-xC-NK7" firstAttribute="top" secondItem="8Ma-3g-N88" secondAttribute="bottom" constant="30" id="Ont-4m-1mK"/>
-                            <constraint firstItem="BPZ-xC-NK7" firstAttribute="top" secondItem="Z9l-xz-qMN" secondAttribute="bottom" constant="30" id="vb5-HN-BNh"/>
-                            <constraint firstItem="8Ma-3g-N88" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="w6M-GP-f8Y"/>
-                            <constraint firstItem="BPZ-xC-NK7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xf2-Wf-1Rx"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="favoriteButton" destination="6ZB-Vj-7bN" id="ohh-0v-jZg"/>
-                        <outlet property="favoriteView" destination="aP9-IG-aD2" id="cnO-eP-gqk"/>
                         <outlet property="hexLabel" destination="Z9l-xz-qMN" id="2dy-ki-oQm"/>
                     </connections>
                 </viewController>
@@ -90,9 +46,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

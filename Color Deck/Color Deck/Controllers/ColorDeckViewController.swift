@@ -6,12 +6,11 @@
 //
 
 import UIKit
+import DOFavoriteButton
 
 class ColorDeckViewController: UIViewController {
     
     @IBOutlet weak var hexLabel: UILabel!
-    @IBOutlet weak var favoriteView: UIView!
-    @IBOutlet weak var favoriteButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +18,25 @@ class ColorDeckViewController: UIViewController {
         setupUI()
         view.addSubview(addSwipeView())
         
+        let button = DOFavoriteButton(frame: CGRect(x: 100, y: 50, width: 50, height: 50), image: UIImage(named: "favorite"))
+        self.view.addSubview(button)
+        button.addTarget(self, action: #selector(clicked), for: .touchUpInside)
+        
     }
     
-
-    @IBAction func favoriteButtonClicked(_ sender: UIButton) {
-        print("clicked")
+    @objc func clicked(_ sender: DOFavoriteButton){
+        if sender.isSelected {
+            // deselect
+            sender.deselect()
+        } else {
+            // select with animation
+            sender.select()
+            sender.imageColorOff = UIColor.brown
+            sender.imageColorOn = UIColor.red
+            sender.circleColor = UIColor.green
+            sender.lineColor = UIColor.blue
+            sender.duration = 3.0 // default: 1.0
+        }
     }
     
     func addSwipeView() -> UIView {

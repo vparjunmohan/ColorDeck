@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		138D1EC114FA025AF2324983 /* Pods_Color_Deck_Color_DeckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48870BDB86716A550DD1DAAF /* Pods_Color_Deck_Color_DeckUITests.framework */; };
+		74CAB4485C5D8A76E6E8134C /* Pods_Color_Deck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B93164BE1ADFB293C3316DB /* Pods_Color_Deck.framework */; };
+		DB1ECD9430E91BA123DB851A /* Pods_Color_DeckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A381F05D9D273B1493A4BB /* Pods_Color_DeckTests.framework */; };
 		DE0F62672915A6C3004E45DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62662915A6C3004E45DF /* AppDelegate.swift */; };
 		DE0F62692915A6C3004E45DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62682915A6C3004E45DF /* SceneDelegate.swift */; };
 		DE0F626B2915A6C3004E45DF /* ColorDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F626A2915A6C3004E45DF /* ColorDeckViewController.swift */; };
@@ -38,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B93164BE1ADFB293C3316DB /* Pods_Color_Deck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_Deck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16ABE63B706A442AC975B499 /* Pods-Color Deck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Deck.debug.xcconfig"; path = "Target Support Files/Pods-Color Deck/Pods-Color Deck.debug.xcconfig"; sourceTree = "<group>"; };
+		17A381F05D9D273B1493A4BB /* Pods_Color_DeckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_DeckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48870BDB86716A550DD1DAAF /* Pods_Color_Deck_Color_DeckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Color_Deck_Color_DeckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F3210927B87369C2B4F5BA /* Pods-Color DeckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color DeckTests.debug.xcconfig"; path = "Target Support Files/Pods-Color DeckTests/Pods-Color DeckTests.debug.xcconfig"; sourceTree = "<group>"; };
+		79C1428AE1F8C923C15E172D /* Pods-Color Deck-Color DeckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Deck-Color DeckUITests.debug.xcconfig"; path = "Target Support Files/Pods-Color Deck-Color DeckUITests/Pods-Color Deck-Color DeckUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0954A47928D650A53C5BEC0 /* Pods-Color DeckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color DeckTests.release.xcconfig"; path = "Target Support Files/Pods-Color DeckTests/Pods-Color DeckTests.release.xcconfig"; sourceTree = "<group>"; };
+		D62FEEB35C60E0033ACBEFA4 /* Pods-Color Deck-Color DeckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Deck-Color DeckUITests.release.xcconfig"; path = "Target Support Files/Pods-Color Deck-Color DeckUITests/Pods-Color Deck-Color DeckUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE0F62632915A6C3004E45DF /* Color Deck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Deck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0F62662915A6C3004E45DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE0F62682915A6C3004E45DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +64,7 @@
 		DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DE0F629B2915B1D6004E45DF /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		DE0F629D2915B718004E45DF /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
+		ED3C15FA2070572B286EC743 /* Pods-Color Deck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Deck.release.xcconfig"; path = "Target Support Files/Pods-Color Deck/Pods-Color Deck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74CAB4485C5D8A76E6E8134C /* Pods_Color_Deck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1ECD9430E91BA123DB851A /* Pods_Color_DeckTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +88,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				138D1EC114FA025AF2324983 /* Pods_Color_Deck_Color_DeckUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C620A2B54A123619F33E4FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16ABE63B706A442AC975B499 /* Pods-Color Deck.debug.xcconfig */,
+				ED3C15FA2070572B286EC743 /* Pods-Color Deck.release.xcconfig */,
+				79C1428AE1F8C923C15E172D /* Pods-Color Deck-Color DeckUITests.debug.xcconfig */,
+				D62FEEB35C60E0033ACBEFA4 /* Pods-Color Deck-Color DeckUITests.release.xcconfig */,
+				63F3210927B87369C2B4F5BA /* Pods-Color DeckTests.debug.xcconfig */,
+				A0954A47928D650A53C5BEC0 /* Pods-Color DeckTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9F05E7455B54F4ED66BE3EB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B93164BE1ADFB293C3316DB /* Pods_Color_Deck.framework */,
+				48870BDB86716A550DD1DAAF /* Pods_Color_Deck_Color_DeckUITests.framework */,
+				17A381F05D9D273B1493A4BB /* Pods_Color_DeckTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE0F625A2915A6C3004E45DF = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +126,8 @@
 				DE0F627C2915A6C4004E45DF /* Color DeckTests */,
 				DE0F62862915A6C4004E45DF /* Color DeckUITests */,
 				DE0F62642915A6C3004E45DF /* Products */,
+				5C620A2B54A123619F33E4FB /* Pods */,
+				9F05E7455B54F4ED66BE3EB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE0F628D2915A6C4004E45DF /* Build configuration list for PBXNativeTarget "Color Deck" */;
 			buildPhases = (
+				F8353E327D9A7D3B7FAD621D /* [CP] Check Pods Manifest.lock */,
 				DE0F625F2915A6C3004E45DF /* Sources */,
 				DE0F62602915A6C3004E45DF /* Frameworks */,
 				DE0F62612915A6C3004E45DF /* Resources */,
+				8B7B8C824B75BA7B1163080B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE0F62902915A6C4004E45DF /* Build configuration list for PBXNativeTarget "Color DeckTests" */;
 			buildPhases = (
+				CAD9738B986A44ED910C31B5 /* [CP] Check Pods Manifest.lock */,
 				DE0F62752915A6C4004E45DF /* Sources */,
 				DE0F62762915A6C4004E45DF /* Frameworks */,
 				DE0F62772915A6C4004E45DF /* Resources */,
@@ -223,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE0F62932915A6C4004E45DF /* Build configuration list for PBXNativeTarget "Color DeckUITests" */;
 			buildPhases = (
+				CADB5B051BBB70A7DBB377E9 /* [CP] Check Pods Manifest.lock */,
 				DE0F627F2915A6C4004E45DF /* Sources */,
 				DE0F62802915A6C4004E45DF /* Frameworks */,
 				DE0F62812915A6C4004E45DF /* Resources */,
+				A5BCEFA87881249B861B1C56 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +352,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B7B8C824B75BA7B1163080B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Color Deck/Pods-Color Deck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Color Deck/Pods-Color Deck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Color Deck/Pods-Color Deck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5BCEFA87881249B861B1C56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Color Deck-Color DeckUITests/Pods-Color Deck-Color DeckUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Color Deck-Color DeckUITests/Pods-Color Deck-Color DeckUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Color Deck-Color DeckUITests/Pods-Color Deck-Color DeckUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAD9738B986A44ED910C31B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Color DeckTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CADB5B051BBB70A7DBB377E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Color Deck-Color DeckUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8353E327D9A7D3B7FAD621D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Color Deck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE0F625F2915A6C3004E45DF /* Sources */ = {
@@ -488,6 +637,7 @@
 		};
 		DE0F628E2915A6C4004E45DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16ABE63B706A442AC975B499 /* Pods-Color Deck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +666,7 @@
 		};
 		DE0F628F2915A6C4004E45DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED3C15FA2070572B286EC743 /* Pods-Color Deck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -544,6 +695,7 @@
 		};
 		DE0F62912915A6C4004E45DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63F3210927B87369C2B4F5BA /* Pods-Color DeckTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +716,7 @@
 		};
 		DE0F62922915A6C4004E45DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0954A47928D650A53C5BEC0 /* Pods-Color DeckTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -584,6 +737,7 @@
 		};
 		DE0F62942915A6C4004E45DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79C1428AE1F8C923C15E172D /* Pods-Color Deck-Color DeckUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -602,6 +756,7 @@
 		};
 		DE0F62952915A6C4004E45DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D62FEEB35C60E0033ACBEFA4 /* Pods-Color Deck-Color DeckUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
