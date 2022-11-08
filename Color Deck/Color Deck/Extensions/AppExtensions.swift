@@ -127,5 +127,24 @@ extension FavouriteColorViewController {
         layout.minimumLineSpacing = 5
         favouriteCollectionView.collectionViewLayout = layout
         favouriteCollectionView.register(UINib(nibName: "FavouriteColorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FavouriteColorCollectionViewCell")
+        favouriteColors = DbOperations().selectTable(tableName: ColorDeckEntity.favouritesTable) as! [[String:Any]]
     }
+    
+    @objc func colorCopied(_ sender: UIButton) {
+        AppUtils().removeCurrentToast(view: view)
+        let copiedColor = DbOperations().selectTableWhere(tableName: ColorDeckEntity.favouritesTable, selectKey: "uuid", selectValue: sender.accessibilityIdentifier!) as! [[String:Any]]
+        if copiedColor.count > 0 {
+            let selectedColor = copiedColor[0]["color_code"] as? String
+            UIPasteboard.general.string = selectedColor
+            AppUtils().createToast(message: "Copied", parentView: view)
+        }
+    }
+    
+    @objc func colorRemoved(_ sender: UIButton) {
+        AppUtils().removeCurrentToast(view: view)
+        DbOperations().deleteTable(deleteKey: "uuid", deleteValue: sender.accessibilityIdentifier!, tableName: ColorDeckEntity.favouritesTable)
+        favouriteColors = DbOperations().selectTable(tableName: ColorDeckEntity.favouritesTable) as! [[String:Any]]
+        favouriteCollectionView.reloadData()
+    }
+
 }
