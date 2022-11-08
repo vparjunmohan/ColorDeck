@@ -7,15 +7,29 @@
 
 import UIKit
 
+protocol FavouriteColorDelegate {
+    func updateButtonUI()
+}
+
 class FavouriteColorViewController: UIViewController {
     
     @IBOutlet weak var favouriteCollectionView: UICollectionView!
     
     var favouriteColors: [[String:Any]] = []
+    var favouriteDelegate: FavouriteColorDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.isMovingFromParent {
+            if favouriteDelegate != nil {
+                favouriteDelegate.updateButtonUI()
+            }
+        }
     }
 }
 

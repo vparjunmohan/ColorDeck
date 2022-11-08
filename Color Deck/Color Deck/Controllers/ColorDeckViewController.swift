@@ -11,20 +11,22 @@ import DOFavoriteButton
 class ColorDeckViewController: UIViewController {
     
     @IBOutlet weak var favouriteView: UIView!
+    
     var uuid: String!
     var currentColorCode: String!
+    var currentUUIDArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
         view.addSubview(addSwipeView())
         createFavButton()
-        
     }
     
     @IBAction func didClickFavourite(_ sender: UIButton) {
+        currentUUIDArray.removeAll()
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FavouriteColorViewController") as? FavouriteColorViewController
+        viewController?.favouriteDelegate = self
         navigationController?.pushViewController(viewController!, animated: true)
     }
     
@@ -119,4 +121,23 @@ class ColorDeckViewController: UIViewController {
             break
         }
     }
+}
+
+extension ColorDeckViewController: FavouriteColorDelegate {
+    
+    func updateButtonUI() {
+        let currentFavourites = DbOperations().selectTable(tableName: ColorDeckEntity.favouritesTable) as! [[String:Any]]
+       
+        for favourite in currentFavourites {
+            currentUUIDArray.append(favourite["uuid"] as! String)
+        }
+        if currentUUIDArray.contains(uuid) == false {
+            if let favouriteButton = view.viewWithTag(100935485) as? DOFavoriteButton {
+                favouriteButton.isSelected = false
+                favouriteButton.deselect()
+                favouriteButton.imageColorOff = UIColor.white
+            }
+        }
+    }
+
 }
