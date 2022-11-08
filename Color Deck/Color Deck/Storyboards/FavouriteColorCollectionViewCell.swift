@@ -12,6 +12,7 @@ class FavouriteColorCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var hexLabel: UILabel!
     @IBOutlet weak var copyButton: UIButton!
+    @IBOutlet weak var removeButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

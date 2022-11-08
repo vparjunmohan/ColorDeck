@@ -72,6 +72,7 @@ func hexStringToUIColor(hex:String) -> UIColor {
 extension ColorDeckViewController {
     
     func setupUI() {
+        navigationItem.title = "Color Deck"
         favouriteView.backgroundColor = UIColor.white
         favouriteView.layer.cornerRadius = 30
     }
@@ -79,6 +80,7 @@ extension ColorDeckViewController {
     func createHexLabel() {
         let hexLabel = UILabel()
         hexLabel.tag = 400
+        hexLabel.textColor = UIColor.black
         hexLabel.font = UIFont(name: "Chalkboard SE Regular", size: 14.0)
         hexLabel.textAlignment = .center
         view.addSubview(hexLabel)
@@ -116,7 +118,7 @@ extension FavouriteColorViewController {
         let screenWidth = screenSize.width
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-        layout.itemSize = CGSize(width: screenWidth/3, height: screenWidth/3 + 30)
+        layout.itemSize = CGSize(width: screenWidth/3, height: screenWidth/3 + 40)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 5
         favouriteCollectionView.collectionViewLayout = layout

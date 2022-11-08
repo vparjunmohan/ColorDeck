@@ -14,9 +14,7 @@ class ColorDeckViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Color Deck"
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.backgroundColor = UIColor.systemGray6
+        
         setupUI()
         view.addSubview(addSwipeView())
         createFavButton()
