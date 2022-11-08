@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavouriteColorCollectionViewCell" id="gTV-IL-0wX" customClass="FavouriteColorCollectionViewCell" customModule="Color_Deck" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="157" height="158"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="157" height="158"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJz-7s-Qev">
+                        <rect key="frame" x="0.0" y="0.0" width="157" height="158"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t05-Zb-aaq">
+                                <rect key="frame" x="28.666666666666671" y="28" width="100.00000000000001" height="100"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7yY-Jb-a1F"/>
+                                    <constraint firstAttribute="height" constant="100" id="vYO-mu-rdH"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gw-ur-mLx">
+                                <rect key="frame" x="28.666666666666671" y="3" width="100.00000000000001" height="20"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZ9-Fm-YJp">
+                                <rect key="frame" x="74.666666666666671" y="128" width="54.000000000000014" height="32"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Remove"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdK-pg-fRL">
+                                <rect key="frame" x="28.666666666666671" y="128" width="45" height="32"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Copy"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hdK-pg-fRL" firstAttribute="top" secondItem="t05-Zb-aaq" secondAttribute="bottom" id="5vI-12-XkR"/>
+                            <constraint firstItem="4Gw-ur-mLx" firstAttribute="top" secondItem="lJz-7s-Qev" secondAttribute="top" constant="3" id="Bgu-IN-5Tz"/>
+                            <constraint firstItem="4Gw-ur-mLx" firstAttribute="leading" secondItem="t05-Zb-aaq" secondAttribute="leading" id="DLY-wh-Vpq"/>
+                            <constraint firstItem="WZ9-Fm-YJp" firstAttribute="top" secondItem="hdK-pg-fRL" secondAttribute="top" id="GAz-O2-KFV"/>
+                            <constraint firstItem="t05-Zb-aaq" firstAttribute="centerX" secondItem="lJz-7s-Qev" secondAttribute="centerX" id="N7v-es-1ae"/>
+                            <constraint firstItem="hdK-pg-fRL" firstAttribute="leading" secondItem="t05-Zb-aaq" secondAttribute="leading" id="RXq-7N-w2a"/>
+                            <constraint firstItem="t05-Zb-aaq" firstAttribute="top" secondItem="4Gw-ur-mLx" secondAttribute="bottom" constant="5" id="cpy-lf-nNy"/>
+                            <constraint firstItem="WZ9-Fm-YJp" firstAttribute="width" secondItem="t05-Zb-aaq" secondAttribute="width" multiplier="0.54" id="iUZ-eh-vjj"/>
+                            <constraint firstItem="4Gw-ur-mLx" firstAttribute="trailing" secondItem="t05-Zb-aaq" secondAttribute="trailing" id="nPR-wm-dZX"/>
+                            <constraint firstItem="4Gw-ur-mLx" firstAttribute="centerX" secondItem="lJz-7s-Qev" secondAttribute="centerX" id="oCu-5q-cZK"/>
+                            <constraint firstItem="WZ9-Fm-YJp" firstAttribute="trailing" secondItem="t05-Zb-aaq" secondAttribute="trailing" id="rDt-Gx-mSV"/>
+                            <constraint firstItem="hdK-pg-fRL" firstAttribute="width" secondItem="t05-Zb-aaq" secondAttribute="width" multiplier="0.45" id="wit-FT-n5R"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="lJz-7s-Qev" secondAttribute="bottom" id="UOX-nj-3pQ"/>
+                <constraint firstAttribute="trailing" secondItem="lJz-7s-Qev" secondAttribute="trailing" id="gSe-QZ-x90"/>
+                <constraint firstItem="lJz-7s-Qev" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oK2-GK-TGC"/>
+                <constraint firstItem="lJz-7s-Qev" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="v3q-vp-AwS"/>
+            </constraints>
+            <size key="customSize" width="151" height="171"/>
+            <connections>
+                <outlet property="colorView" destination="t05-Zb-aaq" id="b8v-XU-8pE"/>
+                <outlet property="copyButton" destination="hdK-pg-fRL" id="PhG-5B-vXK"/>
+                <outlet property="hexLabel" destination="4Gw-ur-mLx" id="Npt-9H-5by"/>
+            </connections>
+            <point key="canvasLocation" x="197.70992366412213" y="68.309859154929583"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

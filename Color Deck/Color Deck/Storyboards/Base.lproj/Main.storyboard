@@ -84,9 +84,35 @@
                     <view key="view" contentMode="scaleToFill" id="4gn-JN-so2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bes-Yy-QmD">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DeA-Ys-y2A">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4UT-6u-uoM" id="N0K-kQ-gsC"/>
+                                    <outlet property="delegate" destination="4UT-6u-uoM" id="yjI-Jf-2d3"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BUJ-2b-YDd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bes-Yy-QmD" firstAttribute="top" secondItem="BUJ-2b-YDd" secondAttribute="top" id="GE3-VP-HbB"/>
+                            <constraint firstItem="bes-Yy-QmD" firstAttribute="trailing" secondItem="BUJ-2b-YDd" secondAttribute="trailing" id="NFI-iV-FGl"/>
+                            <constraint firstItem="BUJ-2b-YDd" firstAttribute="bottom" secondItem="bes-Yy-QmD" secondAttribute="bottom" id="bKy-Qs-eFq"/>
+                            <constraint firstItem="bes-Yy-QmD" firstAttribute="leading" secondItem="BUJ-2b-YDd" secondAttribute="leading" id="zBs-ao-6ww"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favouriteCollectionView" destination="bes-Yy-QmD" id="oA3-K1-Dc3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQe-ik-sYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

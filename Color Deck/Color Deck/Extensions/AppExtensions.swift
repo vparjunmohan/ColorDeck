@@ -47,6 +47,28 @@ func hexStringFromColor(color: UIColor) -> String {
     return hexString
 }
 
+func hexStringToUIColor(hex:String) -> UIColor {
+    var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+    if (cString.hasPrefix("#")) {
+        cString.remove(at: cString.startIndex)
+    }
+
+    if ((cString.count) != 6) {
+        return UIColor.gray
+    }
+
+    var rgbValue:UInt64 = 0
+    Scanner(string: cString).scanHexInt64(&rgbValue)
+
+    return UIColor(
+        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+        alpha: CGFloat(1.0)
+    )
+}
+
 extension ColorDeckViewController {
     
     func setupUI() {
@@ -63,8 +85,6 @@ extension ColorDeckViewController {
     }
     
     func createFavButton() {
-        let defaults = UserDefaults.standard
-        
         let favButton = DOFavoriteButton(frame: CGRect(x: 0, y: 0, width: 70, height: 70), image: UIImage(named: "favorite"))
         favButton.imageColorOff = .white
         favButton.tag = 100935485
@@ -87,5 +107,19 @@ extension ColorDeckViewController {
             sender.lineColor = UIColor.blue
             sender.duration = 3.0 // default: 1.0
         }
+    }
+}
+
+extension FavouriteColorViewController {
+    func setupUI(){
+        let screenSize = view.bounds
+        let screenWidth = screenSize.width
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        layout.itemSize = CGSize(width: screenWidth/3, height: screenWidth/3 + 30)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 5
+        favouriteCollectionView.collectionViewLayout = layout
+        favouriteCollectionView.register(UINib(nibName: "FavouriteColorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FavouriteColorCollectionViewCell")
     }
 }
