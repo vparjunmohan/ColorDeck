@@ -5,7 +5,7 @@
 
 Color Deck is a free random color generator iOS application that allows you to pick and make a collection of your favourite colors. SQLite database is used to store the color data of your favourite colors.
 
-<img width="1440" alt="Screenshot 2022-11-08 at 4 16 39 PM" src="https://user-images.githubusercontent.com/62532677/200616802-a9d7c523-e14b-4338-adc8-d4bf5459811c.png">
+<img width="1440" alt="Screenshot 2022-11-08 at 4 16 39 PM" src="https://user-images.githubusercontent.com/62532677/200616802-a9d7c523-e14b-4338-adc8-d4bf5459811c.png"> https://user-images.githubusercontent.com/62532677/200616863-373a999a-6e52-4291-a077-cf5184d48dc4.mp4
 
 ## Features
 
