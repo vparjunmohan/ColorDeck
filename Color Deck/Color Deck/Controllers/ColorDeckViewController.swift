@@ -9,13 +9,10 @@ import UIKit
 import DOFavoriteButton
 
 class ColorDeckViewController: UIViewController {
-    
-    @IBOutlet weak var hexLabel: UILabel!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
         view.addSubview(addSwipeView())
         
         let button = DOFavoriteButton(frame: CGRect(x: 100, y: 50, width: 50, height: 50), image: UIImage(named: "favorite"))
@@ -45,7 +42,6 @@ class ColorDeckViewController: UIViewController {
         let hexCode = hexStringFromColor(color: color)
         let viewHeight = 350.0
         let viewWidth = 250.0
-        hexLabel.text = hexCode
         let defaults = UserDefaults.standard
         if let viewTag = defaults.object(forKey: "viewTag") as? Int {
             swipeView.tag = viewTag
@@ -56,6 +52,11 @@ class ColorDeckViewController: UIViewController {
         swipeView.applyCommonDropShadow(radius: 5, opacity: 1)
         swipeView.alpha = 0
         swipeView.frame = CGRect(x: (view.center.x)-(viewWidth/2), y: (view.center.y)-(viewHeight/2), width: viewWidth, height: viewHeight)
+        createHexLabel()
+        if let hexLabel = view.viewWithTag(400) as? UILabel {
+            hexLabel.frame = CGRect(x: 0, y: swipeView.frame.maxY + 30, width: self.view.frame.width, height: 20)
+            hexLabel.text = "Color code: \(hexCode)"
+        }
         
         UIView.animate(withDuration: 0.1, delay: 0.0, options: UIView.AnimationOptions.curveEaseInOut, animations: { () -> Void in
             swipeView.alpha = 1

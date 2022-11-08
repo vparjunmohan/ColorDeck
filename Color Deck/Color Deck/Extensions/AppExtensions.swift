@@ -47,7 +47,12 @@ func hexStringFromColor(color: UIColor) -> String {
  }
 
 extension ColorDeckViewController {
-    func setupUI(){
-        hexLabel.text = ""
+    
+    func createHexLabel(){
+        let hexLabel = UILabel()
+        hexLabel.tag = 400
+        hexLabel.font = UIFont(name: "Chalkboard SE Regular", size: 14.0)
+        hexLabel.textAlignment = .center
+        view.addSubview(hexLabel)
     }
 }
