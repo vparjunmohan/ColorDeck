@@ -14,9 +14,9 @@ class DbOperations: NSObject {
     var count = 1
     func createTable(tableName :String,tableValues:[String:Any], unique: String) -> Bool
     {
-        let filename = "colorDeck.sqlite" //UserDefaults.standard.value(forKey: "current_db_file_name") as! String
+        let filename = "colorDeck.sqlite"
         fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(filename)
-        
+        print(fileURL)
         var fields = ""
         let primarykey = unique
         for (item) in tableValues.enumerated(){
@@ -56,7 +56,7 @@ class DbOperations: NSObject {
     
     func selectTable(tableName: String) -> [Any]{
         
-        let filename = "colorDeck.sqlite" //UserDefaults.standard.value(forKey: "current_db_file_name") != nil ? UserDefaults.standard.value(forKey: "current_db_file_name") as! String : ""
+        let filename = "colorDeck.sqlite"
         fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(filename)
         
         if sqlite3_open(fileURL.path, &db) == SQLITE_OK
@@ -123,7 +123,7 @@ class DbOperations: NSObject {
     
     func selectTableWhere(tableName: String,selectKey:String,selectValue:Any) -> [Any]{
         
-        let filename = "colorDeck.sqlite" // UserDefaults.standard.value(forKey: "current_db_file_name") as! String
+        let filename = "colorDeck.sqlite"
         
         fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(filename)
         if sqlite3_open(fileURL.path, &db) == SQLITE_OK
@@ -302,32 +302,7 @@ class DbOperations: NSObject {
                             let errmsg = String(cString: sqlite3_errmsg(db)!)
                             print("failure binding name6: \(errmsg)")
                         }
-//                    case "Array<Dictionary<String, Any>>":
-//                        let value = IDSUtils().getJSONFromArray(dict: (val as! Array<Dictionary<String, Any>>))
-//                        if sqlite3_bind_text(stmt, Int32(index!+1), (value as NSString).utf8String, -1, nil) != SQLITE_OK{
-//                            let errmsg = String(cString: sqlite3_errmsg(db)!)
-//                            print("failure binding name6: \(errmsg)")
-//                        }
-//                    case "Array<Any>":
-//                        let value = IDSUtils().getJSONFromArray(dict: (val as! Array<Dictionary<String, Any>>))
-//                        if sqlite3_bind_text(stmt, Int32(index!+1), (value as NSString).utf8String, -1, nil) != SQLITE_OK{
-//                            let errmsg = String(cString: sqlite3_errmsg(db)!)
-//                            print("failure binding name6: \(errmsg)")
-//                        }
-//                    case "__NSArrayI":
-//                        let value = IDSUtils().getJSONFromArray(dict: (val as! Array<Dictionary<String, Any>>))
-//                        if sqlite3_bind_text(stmt, Int32(index!+1), (value as NSString).utf8String, -1, nil) != SQLITE_OK{
-//                            let errmsg = String(cString: sqlite3_errmsg(db)!)
-//                            print("failure binding name6: \(errmsg)")
-//                        }
-//                    case "__NSSingleObjectArrayI":
-//                        let value = IDSUtils().getJSONFromArray(dict: (val as! Array<Dictionary<String, Any>>))
-//                        if sqlite3_bind_text(stmt, Int32(index!+1), (value as NSString).utf8String, -1, nil) != SQLITE_OK{
-//                            let errmsg = String(cString: sqlite3_errmsg(db)!)
-//                            print("failure binding name6: \(errmsg)")
-//                        }
                     case "NSNull":
-                        //                        return
                         break
                     case "__NSArray0":
                         if sqlite3_bind_text(stmt, Int32(index!+1), NSString("").utf8String, -1, nil) != SQLITE_OK{
@@ -335,13 +310,6 @@ class DbOperations: NSObject {
                             print("failure binding name6: \(errmsg)")
                         }
                         break
-//                    case "__NSDictionaryI":
-//                        let value = IDSUtils().getJSONFromDict(dict: (val as! NSDictionary) as! [String : Any])
-//                        if sqlite3_bind_text(stmt, Int32(index!+1), (value as NSString).utf8String, -1, nil) != SQLITE_OK{
-//                            let errmsg = String(cString: sqlite3_errmsg(db)!)
-//                            print("failure binding name6: \(errmsg)")
-//                        }
-//                        break
                     case "Optional<Any>":
                         if val is Int{
                             if sqlite3_bind_int(stmt, Int32(index!+1), (val as AnyObject).intValue) != SQLITE_OK{
@@ -388,7 +356,7 @@ class DbOperations: NSObject {
     }
     
     func updateTable(valuesToChange:[String:Any],whereKey:String,whereValue:Any,tableName: String){
-        let filename = "colorDeck.sqlite" //UserDefaults.standard.value(forKey: "current_db_file_name") as! String
+        let filename = "colorDeck.sqlite"
         fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(filename)
         
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK
@@ -493,7 +461,7 @@ class DbOperations: NSObject {
     }
     
     func deleteTable(deleteKey:String,deleteValue:Any,tableName: String){
-        let filename = "colorDeck.sqlite"  //UserDefaults.standard.value(forKey: "current_db_file_name") as! String
+        let filename = "colorDeck.sqlite"
         fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(filename)
         
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK
@@ -574,7 +542,7 @@ class DbOperations: NSObject {
     }
     
     func deleteAllFromTable(tableName: String){
-        let filename = "colorDeck.sqlite"  // UserDefaults.standard.value(forKey: "current_db_file_name") as! String
+        let filename = "colorDeck.sqlite"
         fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(filename)
         
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK
@@ -633,7 +601,7 @@ class DbOperations: NSObject {
 
     }
     func clearLocalDBForUser(){
-        let filename = "colorDeck.sqlite"  //UserDefaults.standard.value(forKey: "current_db_file_name") as! String
+        let filename = "colorDeck.sqlite"
         fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(filename)
         do {
             try FileManager.default.removeItem(at: fileURL)

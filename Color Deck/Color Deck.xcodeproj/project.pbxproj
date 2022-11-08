@@ -26,6 +26,7 @@
 		DE9467EF291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */; };
 		DE9467F2291A3DEF005DBA32 /* DbOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467F1291A3DEF005DBA32 /* DbOperations.swift */; };
 		DE9467F4291A3E7B005DBA32 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467F3291A3E7B005DBA32 /* AppUtils.swift */; };
+		DE9467F6291A412D005DBA32 /* ColorDeckEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467F5291A412D005DBA32 /* ColorDeckEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteColorCollectionViewCell.xib; sourceTree = "<group>"; };
 		DE9467F1291A3DEF005DBA32 /* DbOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbOperations.swift; sourceTree = "<group>"; };
 		DE9467F3291A3E7B005DBA32 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		DE9467F5291A412D005DBA32 /* ColorDeckEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDeckEntity.swift; sourceTree = "<group>"; };
 		ED3C15FA2070572B286EC743 /* Pods-Color Deck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Deck.release.xcconfig"; path = "Target Support Files/Pods-Color Deck/Pods-Color Deck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0F629D2915B718004E45DF /* ColorConstants.swift */,
+				DE9467F5291A412D005DBA32 /* ColorDeckEntity.swift */,
 			);
 			path = "App Constants";
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				DE0F62692915A6C3004E45DF /* SceneDelegate.swift in Sources */,
 				DE0F629E2915B718004E45DF /* ColorConstants.swift in Sources */,
 				DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */,
+				DE9467F6291A412D005DBA32 /* ColorDeckEntity.swift in Sources */,
 				DE9467EE291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift in Sources */,
 				DE9467F2291A3DEF005DBA32 /* DbOperations.swift in Sources */,
 			);

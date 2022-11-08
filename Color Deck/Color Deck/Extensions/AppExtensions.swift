@@ -101,8 +101,12 @@ extension ColorDeckViewController {
             // deselect
             sender.deselect()
             sender.imageColorOff = UIColor.white
+            DbOperations().deleteTable(deleteKey: "uuid", deleteValue: uuid!, tableName: ColorDeckEntity.favouritesTable)
         } else {
             // select with animation
+            ColorDeckEntity.favourite.updateValue(uuid!, forKey: "uuid")
+            ColorDeckEntity.favourite.updateValue(currentColorCode!, forKey: "color_code")
+            DbOperations().insertTable(insertvalues: ColorDeckEntity.favourite, tableName: ColorDeckEntity.favouritesTable, uniquekey: "uuid")
             sender.select()
             sender.imageColorOn = UIColor.red
             sender.circleColor = UIColor.green

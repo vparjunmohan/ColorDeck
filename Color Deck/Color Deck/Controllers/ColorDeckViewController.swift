@@ -11,6 +11,8 @@ import DOFavoriteButton
 class ColorDeckViewController: UIViewController {
     
     @IBOutlet weak var favouriteView: UIView!
+    var uuid: String!
+    var currentColorCode: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +32,11 @@ class ColorDeckViewController: UIViewController {
         let swipeView = UIView()
         let color = UIColor.random()
         let hexCode = hexStringFromColor(color: color)
+        currentColorCode = hexCode
         let viewHeight = 350.0
         let viewWidth = 250.0
         let defaults = UserDefaults.standard
+        uuid = UUID().uuidString
         if let viewTag = defaults.object(forKey: "viewTag") as? Int {
             swipeView.tag = viewTag
         }
