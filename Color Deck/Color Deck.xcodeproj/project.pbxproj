@@ -24,6 +24,8 @@
 		DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */; };
 		DE9467EE291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */; };
 		DE9467EF291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */; };
+		DE9467F2291A3DEF005DBA32 /* DbOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467F1291A3DEF005DBA32 /* DbOperations.swift */; };
+		DE9467F4291A3E7B005DBA32 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467F3291A3E7B005DBA32 /* AppUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorViewController.swift; sourceTree = "<group>"; };
 		DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteColorCollectionViewCell.xib; sourceTree = "<group>"; };
+		DE9467F1291A3DEF005DBA32 /* DbOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbOperations.swift; sourceTree = "<group>"; };
+		DE9467F3291A3E7B005DBA32 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		ED3C15FA2070572B286EC743 /* Pods-Color Deck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Deck.release.xcconfig"; path = "Target Support Files/Pods-Color Deck/Pods-Color Deck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,12 +153,13 @@
 		DE0F62652915A6C3004E45DF /* Color Deck */ = {
 			isa = PBXGroup;
 			children = (
-				DE0F629F2915B726004E45DF /* AppConstants */,
+				DE0F629F2915B726004E45DF /* App Constants */,
 				DE0F62962915B0BD004E45DF /* General */,
 				DE0F629A2915B16B004E45DF /* Extensions */,
 				DE0F62972915B0CC004E45DF /* Controllers */,
 				DE0F62982915B0DA004E45DF /* Storyboards */,
 				DE0F62992915B0EB004E45DF /* Resources */,
+				DE9467F0291A3D31005DBA32 /* Utils */,
 				DE0F62742915A6C4004E45DF /* Info.plist */,
 			);
 			path = "Color Deck";
@@ -222,12 +227,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		DE0F629F2915B726004E45DF /* AppConstants */ = {
+		DE0F629F2915B726004E45DF /* App Constants */ = {
 			isa = PBXGroup;
 			children = (
 				DE0F629D2915B718004E45DF /* ColorConstants.swift */,
 			);
-			path = AppConstants;
+			path = "App Constants";
+			sourceTree = "<group>";
+		};
+		DE9467F0291A3D31005DBA32 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DE9467F1291A3DEF005DBA32 /* DbOperations.swift */,
+				DE9467F3291A3E7B005DBA32 /* AppUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9467F4291A3E7B005DBA32 /* AppUtils.swift in Sources */,
 				DE0F626B2915A6C3004E45DF /* ColorDeckViewController.swift in Sources */,
 				DE0F62672915A6C3004E45DF /* AppDelegate.swift in Sources */,
 				DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */,
@@ -477,6 +492,7 @@
 				DE0F629E2915B718004E45DF /* ColorConstants.swift in Sources */,
 				DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */,
 				DE9467EE291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift in Sources */,
+				DE9467F2291A3DEF005DBA32 /* DbOperations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
