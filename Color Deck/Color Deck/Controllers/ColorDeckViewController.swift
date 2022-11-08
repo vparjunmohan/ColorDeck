@@ -10,12 +10,22 @@ import DOFavoriteButton
 
 class ColorDeckViewController: UIViewController {
     
+    @IBOutlet weak var favouriteView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "Color Deck"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.backgroundColor = UIColor.systemGray6
+        setupUI()
         view.addSubview(addSwipeView())
         createFavButton()
         
+    }
+    
+    @IBAction func didClickFavourite(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FavouriteColorViewController") as? FavouriteColorViewController
+        navigationController?.pushViewController(viewController!, animated: true)
     }
     
     func addSwipeView() -> UIView {
@@ -39,7 +49,6 @@ class ColorDeckViewController: UIViewController {
             hexLabel.frame = CGRect(x: 0, y: swipeView.frame.maxY + 30, width: self.view.frame.width, height: 20)
             hexLabel.text = "Color code: \(hexCode)"
         }
-        
         UIView.animate(withDuration: 0.1, delay: 0.0, options: UIView.AnimationOptions.curveEaseInOut, animations: { () -> Void in
             swipeView.alpha = 1
         })
