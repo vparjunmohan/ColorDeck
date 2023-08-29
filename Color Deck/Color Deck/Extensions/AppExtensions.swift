@@ -136,7 +136,7 @@ extension FavouriteColorViewController {
         if copiedColor.count > 0 {
             let selectedColor = copiedColor[0]["color_code"] as? String
             UIPasteboard.general.string = selectedColor
-            AppUtils().createToast(message: "Copied", parentView: view)
+            AppUtils().createToast(message: "Copied color code \(String(describing: selectedColor!))", parentView: view)
         }
     }
     

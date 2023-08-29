@@ -38,10 +38,11 @@ class AppUtils: NSObject {
         parentView.bringSubviewToFront(toastLabel)
         toastLabel.centerXAnchor.constraint(equalTo: parentView.centerXAnchor).isActive = true
         toastLabel.bottomAnchor.constraint(equalTo: parentView.bottomAnchor, constant: -40).isActive = true
-        toastLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        toastLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
         toastLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseInOut, animations: {
-                toastLabel.alpha = 0.5
+        
+        UIView.animate(withDuration: 1.0, delay: 0.1, options: .curveEaseInOut, animations: {
+                toastLabel.alpha = 0.0
            }, completion: {(isCompleted) in
                 toastLabel.removeFromSuperview()
            })
