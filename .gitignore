@@ -32,6 +32,7 @@ DerivedData/
 
 Momkin/.DS_Store
 .DS_Store
+/Color Deck/.DS_Store
 
 ## Playgrounds
 timeline.xctimeline
@@ -57,9 +58,10 @@ playground.xcworkspace
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
+/Color Deck/Pods
+/Color Deck/.xcworkspace
+/Color Deck/Podfile.lock
 /Pods
-/.xcworkspace
-/Podfile.lock
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 *.xcworkspace
