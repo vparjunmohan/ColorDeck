@@ -20,13 +20,14 @@
 		DE0F62882915A6C4004E45DF /* Color_DeckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62872915A6C4004E45DF /* Color_DeckUITests.swift */; };
 		DE0F628A2915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */; };
 		DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F629B2915B1D6004E45DF /* AppExtensions.swift */; };
-		DE0F629E2915B718004E45DF /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F629D2915B718004E45DF /* ColorConstants.swift */; };
 		DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */; };
 		DE9467EE291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */; };
 		DE9467EF291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */; };
-		DE9467F2291A3DEF005DBA32 /* DbOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467F1291A3DEF005DBA32 /* DbOperations.swift */; };
-		DE9467F4291A3E7B005DBA32 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467F3291A3E7B005DBA32 /* AppUtils.swift */; };
-		DE9467F6291A412D005DBA32 /* ColorDeckEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467F5291A412D005DBA32 /* ColorDeckEntity.swift */; };
+		DED425C52A9EE0E500243A77 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425C42A9EE0E500243A77 /* SwipeView.swift */; };
+		DED425C72A9F0FAB00243A77 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425C62A9F0FAB00243A77 /* Favorites.swift */; };
+		DED425CA2A9F11D400243A77 /* FavoritesRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425C92A9F11D400243A77 /* FavoritesRealm.swift */; };
+		DED425CC2A9F121D00243A77 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425CB2A9F121D00243A77 /* Constants.swift */; };
+		DED425CE2A9F19D100243A77 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,13 +70,14 @@
 		DE0F62872915A6C4004E45DF /* Color_DeckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITests.swift; sourceTree = "<group>"; };
 		DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DE0F629B2915B1D6004E45DF /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
-		DE0F629D2915B718004E45DF /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorViewController.swift; sourceTree = "<group>"; };
 		DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteColorCollectionViewCell.xib; sourceTree = "<group>"; };
-		DE9467F1291A3DEF005DBA32 /* DbOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbOperations.swift; sourceTree = "<group>"; };
-		DE9467F3291A3E7B005DBA32 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
-		DE9467F5291A412D005DBA32 /* ColorDeckEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDeckEntity.swift; sourceTree = "<group>"; };
+		DED425C42A9EE0E500243A77 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		DED425C62A9F0FAB00243A77 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = "Color Deck/Utils/Favorites.swift"; sourceTree = SOURCE_ROOT; };
+		DED425C92A9F11D400243A77 /* FavoritesRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRealm.swift; sourceTree = "<group>"; };
+		DED425CB2A9F121D00243A77 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesViewModel.swift; path = "Color Deck/App Constants/FavoritesViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		ED3C15FA2070572B286EC743 /* Pods-Color Deck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Deck.release.xcconfig"; path = "Target Support Files/Pods-Color Deck/Pods-Color Deck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,10 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				DE0F62962915B0BD004E45DF /* General */,
+				DED425C82A9F118B00243A77 /* Realm */,
 				DE3BC8732A9E6728006F1036 /* Models */,
 				DE3BC8722A9E671D006F1036 /* ViewModel */,
 				DE3BC8712A9E6718006F1036 /* View */,
-				DE0F629F2915B726004E45DF /* App Constants */,
 				DE0F62972915B0CC004E45DF /* Controllers */,
 				DE0F62992915B0EB004E45DF /* Resources */,
 				DE9467F0291A3D31005DBA32 /* Utils */,
@@ -211,18 +213,10 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DE0F629F2915B726004E45DF /* App Constants */ = {
-			isa = PBXGroup;
-			children = (
-				DE0F629D2915B718004E45DF /* ColorConstants.swift */,
-				DE9467F5291A412D005DBA32 /* ColorDeckEntity.swift */,
-			);
-			path = "App Constants";
-			sourceTree = "<group>";
-		};
 		DE3BC8712A9E6718006F1036 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DEE6C5C22A9F62E500E213D4 /* Storyboards */,
 				DE3BC8742A9E6745006F1036 /* Xibs */,
 			);
 			path = View;
@@ -231,6 +225,7 @@
 		DE3BC8722A9E671D006F1036 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -238,6 +233,7 @@
 		DE3BC8732A9E6728006F1036 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DED425C62A9F0FAB00243A77 /* Favorites.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,8 +241,6 @@
 		DE3BC8742A9E6745006F1036 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				DE0F62712915A6C4004E45DF /* LaunchScreen.storyboard */,
-				DE0F626C2915A6C3004E45DF /* Main.storyboard */,
 				DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */,
 				DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */,
 			);
@@ -256,11 +250,28 @@
 		DE9467F0291A3D31005DBA32 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				DE9467F1291A3DEF005DBA32 /* DbOperations.swift */,
-				DE9467F3291A3E7B005DBA32 /* AppUtils.swift */,
+				DED425CB2A9F121D00243A77 /* Constants.swift */,
 				DE0F629B2915B1D6004E45DF /* AppExtensions.swift */,
+				DED425C42A9EE0E500243A77 /* SwipeView.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		DED425C82A9F118B00243A77 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DED425C92A9F11D400243A77 /* FavoritesRealm.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		DEE6C5C22A9F62E500E213D4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F62712915A6C4004E45DF /* LaunchScreen.storyboard */,
+				DE0F626C2915A6C3004E45DF /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,16 +514,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE9467F4291A3E7B005DBA32 /* AppUtils.swift in Sources */,
 				DE0F626B2915A6C3004E45DF /* ColorDeckViewController.swift in Sources */,
+				DED425C52A9EE0E500243A77 /* SwipeView.swift in Sources */,
 				DE0F62672915A6C3004E45DF /* AppDelegate.swift in Sources */,
 				DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */,
 				DE0F62692915A6C3004E45DF /* SceneDelegate.swift in Sources */,
-				DE0F629E2915B718004E45DF /* ColorConstants.swift in Sources */,
+				DED425CA2A9F11D400243A77 /* FavoritesRealm.swift in Sources */,
+				DED425CC2A9F121D00243A77 /* Constants.swift in Sources */,
+				DED425CE2A9F19D100243A77 /* FavoritesViewModel.swift in Sources */,
+				DED425C72A9F0FAB00243A77 /* Favorites.swift in Sources */,
 				DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */,
-				DE9467F6291A412D005DBA32 /* ColorDeckEntity.swift in Sources */,
 				DE9467EE291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift in Sources */,
-				DE9467F2291A3DEF005DBA32 /* DbOperations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

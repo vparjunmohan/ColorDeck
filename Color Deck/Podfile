@@ -6,7 +6,6 @@ target 'Color Deck' do
   use_frameworks!
 
   # Pods for Color Deck
-pod 'DOFavoriteButton'
 pod 'RealmSwift'
 
   target 'Color DeckTests' do
