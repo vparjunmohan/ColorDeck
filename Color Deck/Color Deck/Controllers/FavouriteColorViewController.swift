@@ -45,7 +45,7 @@ class FavouriteColorViewController: UIViewController {
     
     // MARK: - CONFIG
     private func configUI(){
-        self.setupTitle(title: "Favourite")
+        self.setupTitle(title: "Favourites")
         let screenSize = view.bounds
         let screenWidth = screenSize.width
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -59,6 +59,7 @@ class FavouriteColorViewController: UIViewController {
     
     // MARK: - HELPERS
     private func setupData() {
+        self.favouriteCollectionView.flashScrollIndicators()
         guard let favoriteViewModel else { return }
         favoriteViewModel.fetchAllFavorites()
         self.setData()

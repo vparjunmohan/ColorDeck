@@ -18,21 +18,18 @@ extension CGFloat {
 // MARK: - UIColor
 extension UIColor {
     convenience init(hexString: String) {
-        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int = UInt32()
-        Scanner(string: hex).scanHexInt32(&int)
-        let a, r, g, b: UInt32
-        switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-        default:
-            (a, r, g, b) = (255, 0, 0, 0)
-        }
-        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+        var hexSanitized = hexString.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+        
+        var rgb: UInt64 = 0
+        
+        Scanner(string: hexSanitized).scanHexInt64(&rgb)
+        
+        let red = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
+        let green = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
+        let blue = CGFloat(rgb & 0x0000FF) / 255.0
+        
+        self.init(red: red, green: green, blue: blue, alpha: 1.0)
     }
     
     static func random() -> UIColor {
@@ -154,25 +151,15 @@ extension UIViewController {
         let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 180, height: 40)
         view.translatesAutoresizingMaskIntoConstraints = false
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "color deck")
-        imageView.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
-        imageView.addCornerRadius(radius: 10)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(imageView)
         let label = UILabel()
         label.text = title
         label.textColor = UIColor.init(named: "AppFontColor")
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.frame = CGRect(x: imageView.frame.maxY + 10, y: 0, width: 150, height: 30)
+        label.frame = CGRect(x: 0, y: 0, width: 150, height: 30)
         view.addSubview(label)
-        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 3).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 35).isActive = true
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        label.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 10).isActive = true
+        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         label.heightAnchor.constraint(equalToConstant: 30).isActive = true
         label.widthAnchor.constraint(equalToConstant: 150).isActive = true
         self.navigationItem.leftBarButtonItem?.customView?.translatesAutoresizingMaskIntoConstraints = false

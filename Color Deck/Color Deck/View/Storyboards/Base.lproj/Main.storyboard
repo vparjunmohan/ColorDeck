@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Discover-->
+        <!--Color Deck View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ColorDeckViewController" customModule="Color_Deck" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left or right to generate new color" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1g-cV-Ur6">
-                                <rect key="frame" x="10" y="460.5" width="300" height="48.5"/>
+                                <rect key="frame" x="10" y="455.5" width="300" height="48.5"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,11 +29,9 @@
                         <constraints>
                             <constraint firstItem="F1g-cV-Ur6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="DW5-GO-Gm1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F1g-cV-Ur6" secondAttribute="trailing" constant="10" id="UOg-yW-fLe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F1g-cV-Ur6" secondAttribute="bottom" constant="10" id="h8O-sV-MGz"/>
-                            <constraint firstItem="F1g-cV-Ur6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iXz-cs-6ga"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F1g-cV-Ur6" secondAttribute="bottom" constant="15" id="h8O-sV-MGz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Discover" image="house" catalog="system" selectedImage="house.fill" id="LbT-6j-vyJ"/>
                     <navigationItem key="navigationItem" id="zhd-Vs-JUL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -52,7 +50,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bes-Yy-QmD">
                                 <rect key="frame" x="0.0" y="79" width="320" height="440"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DeA-Ys-y2A">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tUX-Bv-91w">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -65,7 +63,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No colors found " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SC9-0q-CL2">
-                                <rect key="frame" x="10" y="273.5" width="300" height="21"/>
+                                <rect key="frame" x="92.5" y="273.5" width="135" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <color key="textColor" name="AppFontColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,13 +72,11 @@
                         <viewLayoutGuide key="safeArea" id="BUJ-2b-YDd"/>
                         <color key="backgroundColor" name="AppBackground"/>
                         <constraints>
-                            <constraint firstItem="BUJ-2b-YDd" firstAttribute="trailing" secondItem="SC9-0q-CL2" secondAttribute="trailing" constant="10" id="7B7-6N-z5s"/>
                             <constraint firstItem="bes-Yy-QmD" firstAttribute="top" secondItem="BUJ-2b-YDd" secondAttribute="top" constant="15" id="GE3-VP-HbB"/>
                             <constraint firstItem="bes-Yy-QmD" firstAttribute="trailing" secondItem="BUJ-2b-YDd" secondAttribute="trailing" id="NFI-iV-FGl"/>
                             <constraint firstItem="SC9-0q-CL2" firstAttribute="centerX" secondItem="4gn-JN-so2" secondAttribute="centerX" id="Ydi-S0-0ES"/>
                             <constraint firstItem="BUJ-2b-YDd" firstAttribute="bottom" secondItem="bes-Yy-QmD" secondAttribute="bottom" id="bKy-Qs-eFq"/>
                             <constraint firstItem="SC9-0q-CL2" firstAttribute="centerY" secondItem="4gn-JN-so2" secondAttribute="centerY" id="qnK-TX-HKR"/>
-                            <constraint firstItem="SC9-0q-CL2" firstAttribute="leading" secondItem="BUJ-2b-YDd" secondAttribute="leading" constant="10" id="r2V-Wb-x2s"/>
                             <constraint firstItem="bes-Yy-QmD" firstAttribute="leading" secondItem="BUJ-2b-YDd" secondAttribute="leading" id="zBs-ao-6ww"/>
                         </constraints>
                     </view>
@@ -99,27 +95,41 @@
             <objects>
                 <tabBarController id="t8d-41-5KN" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q9X-C4-yLO">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" name="AppColorScheme"/>
-                        <tabBarAppearance key="standardAppearance"/>
+                        <tabBarAppearance key="standardAppearance" stackedItemPositioning="centered">
+                            <tabBarItemAppearance key="stackedLayoutAppearance">
+                                <tabBarItemStateAppearance key="normal">
+                                    <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                    <color key="iconColor" name="AppColorScheme"/>
+                                    <offsetWrapper key="badgePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                </tabBarItemStateAppearance>
+                                <tabBarItemStateAppearance key="selected">
+                                    <color key="iconColor" name="AppColorScheme"/>
+                                </tabBarItemStateAppearance>
+                                <tabBarItemStateAppearance key="disabled"/>
+                                <tabBarItemStateAppearance key="focused"/>
+                            </tabBarItemAppearance>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
-                        <segue destination="NvJ-Tz-iSt" kind="relationship" relationship="viewControllers" id="BL9-3F-TVF"/>
-                        <segue destination="svp-0c-nMf" kind="relationship" relationship="viewControllers" id="QeE-6C-0fX"/>
+                        <segue destination="NvJ-Tz-iSt" kind="relationship" relationship="viewControllers" id="rH2-j5-TuT"/>
+                        <segue destination="svp-0c-nMf" kind="relationship" relationship="viewControllers" id="Xle-kS-VCq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFs-bp-tFU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="883" y="-795"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="OY2-K3-d1h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NvJ-Tz-iSt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Yki-0u-dr1"/>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house.fill" id="hch-QA-atQ"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gtv-un-zNZ">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -138,14 +148,14 @@
             </objects>
             <point key="canvasLocation" x="-572" y="4"/>
         </scene>
-        <!--Favorites-->
+        <!--Navigation Controller-->
         <scene sceneID="ShT-Nc-djH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="svp-0c-nMf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" selectedImage="heart.fill" id="KAv-2z-7Wx"/>
+                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" selectedImage="heart.fill" id="KAv-2z-7Wx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yD7-Gz-GWD">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
