@@ -14,12 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // Setting initial swipe view's tag to 1
-        let defaults = UserDefaults.standard
-        if defaults.object(forKey: "viewTag") as? Int == nil {
-            defaults.set(1, forKey: "viewTag")
-        }
         return true
     }
 
