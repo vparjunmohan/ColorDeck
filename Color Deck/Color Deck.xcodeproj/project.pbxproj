@@ -20,6 +20,7 @@
 		DE0F62882915A6C4004E45DF /* Color_DeckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62872915A6C4004E45DF /* Color_DeckUITests.swift */; };
 		DE0F628A2915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */; };
 		DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F629B2915B1D6004E45DF /* AppExtensions.swift */; };
+		DE88E97C2AA1432B0097C69F /* LaunchScreenIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE88E97B2AA1432B0097C69F /* LaunchScreenIcon.png */; };
 		DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */; };
 		DE9467EE291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */; };
 		DE9467EF291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */; };
@@ -75,6 +76,7 @@
 		DE0F62872915A6C4004E45DF /* Color_DeckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITests.swift; sourceTree = "<group>"; };
 		DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DE0F629B2915B1D6004E45DF /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		DE88E97B2AA1432B0097C69F /* LaunchScreenIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenIcon.png; sourceTree = "<group>"; };
 		DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorViewController.swift; sourceTree = "<group>"; };
 		DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteColorCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				DE0F62652915A6C3004E45DF /* Color Deck */,
+				DE88E97B2AA1432B0097C69F /* LaunchScreenIcon.png */,
 				DE0F627C2915A6C4004E45DF /* Color DeckTests */,
 				DE0F62862915A6C4004E45DF /* Color DeckUITests */,
 				DE0F62642915A6C3004E45DF /* Products */,
@@ -412,6 +415,7 @@
 				DE0F62702915A6C4004E45DF /* Assets.xcassets in Resources */,
 				DEDCA9D72AA11FB40045AC81 /* Montserrat-Regular.ttf in Resources */,
 				DEDCA9DD2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf in Resources */,
+				DE88E97C2AA1432B0097C69F /* LaunchScreenIcon.png in Resources */,
 				DE0F626E2915A6C3004E45DF /* Main.storyboard in Resources */,
 				DEDCA9DB2AA11FD10045AC81 /* Montserrat-Bold.ttf in Resources */,
 				DEDCA9DF2AA11FE90045AC81 /* Montserrat-Black.ttf in Resources */,
