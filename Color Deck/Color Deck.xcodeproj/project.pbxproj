@@ -28,6 +28,12 @@
 		DED425CA2A9F11D400243A77 /* FavoritesRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425C92A9F11D400243A77 /* FavoritesRealm.swift */; };
 		DED425CC2A9F121D00243A77 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425CB2A9F121D00243A77 /* Constants.swift */; };
 		DED425CE2A9F19D100243A77 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */; };
+		DEDCA9D72AA11FB40045AC81 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEDCA9D62AA11FB40045AC81 /* Montserrat-Regular.ttf */; };
+		DEDCA9D92AA11FC30045AC81 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEDCA9D82AA11FC30045AC81 /* Montserrat-SemiBold.ttf */; };
+		DEDCA9DB2AA11FD10045AC81 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEDCA9DA2AA11FD10045AC81 /* Montserrat-Bold.ttf */; };
+		DEDCA9DD2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEDCA9DC2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf */; };
+		DEDCA9DF2AA11FE90045AC81 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEDCA9DE2AA11FE90045AC81 /* Montserrat-Black.ttf */; };
+		DEDCA9E12AA126080045AC81 /* color deck-modified.png in Resources */ = {isa = PBXBuildFile; fileRef = DEDCA9E02AA126080045AC81 /* color deck-modified.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +84,12 @@
 		DED425C92A9F11D400243A77 /* FavoritesRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRealm.swift; sourceTree = "<group>"; };
 		DED425CB2A9F121D00243A77 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesViewModel.swift; path = "Color Deck/App Constants/FavoritesViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		DEDCA9D62AA11FB40045AC81 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		DEDCA9D82AA11FC30045AC81 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		DEDCA9DA2AA11FD10045AC81 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		DEDCA9DC2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		DEDCA9DE2AA11FE90045AC81 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		DEDCA9E02AA126080045AC81 /* color deck-modified.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color deck-modified.png"; sourceTree = "<group>"; };
 		ED3C15FA2070572B286EC743 /* Pods-Color Deck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Deck.release.xcconfig"; path = "Target Support Files/Pods-Color Deck/Pods-Color Deck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,7 +220,9 @@
 		DE0F62992915B0EB004E45DF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DEDCA9D52AA11F9C0045AC81 /* Fonts */,
 				DE0F626F2915A6C4004E45DF /* Assets.xcassets */,
+				DEDCA9E02AA126080045AC81 /* color deck-modified.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -263,6 +277,18 @@
 				DED425C92A9F11D400243A77 /* FavoritesRealm.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		DEDCA9D52AA11F9C0045AC81 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DEDCA9DE2AA11FE90045AC81 /* Montserrat-Black.ttf */,
+				DEDCA9DC2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf */,
+				DEDCA9DA2AA11FD10045AC81 /* Montserrat-Bold.ttf */,
+				DEDCA9D82AA11FC30045AC81 /* Montserrat-SemiBold.ttf */,
+				DEDCA9D62AA11FB40045AC81 /* Montserrat-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		DEE6C5C22A9F62E500E213D4 /* Storyboards */ = {
@@ -383,10 +409,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDCA9D92AA11FC30045AC81 /* Montserrat-SemiBold.ttf in Resources */,
 				DE9467EF291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib in Resources */,
 				DE0F62732915A6C4004E45DF /* LaunchScreen.storyboard in Resources */,
 				DE0F62702915A6C4004E45DF /* Assets.xcassets in Resources */,
+				DEDCA9D72AA11FB40045AC81 /* Montserrat-Regular.ttf in Resources */,
+				DEDCA9DD2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf in Resources */,
+				DEDCA9E12AA126080045AC81 /* color deck-modified.png in Resources */,
 				DE0F626E2915A6C3004E45DF /* Main.storyboard in Resources */,
+				DEDCA9DB2AA11FD10045AC81 /* Montserrat-Bold.ttf in Resources */,
+				DEDCA9DF2AA11FE90045AC81 /* Montserrat-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
