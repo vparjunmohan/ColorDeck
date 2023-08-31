@@ -91,7 +91,7 @@ extension UIViewController {
     /// - Parameter title: Title in String
     func setupNavigation(title: String) {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        label.font = UIFont(name: "Montserrat-Black", size: 30)
         label.textColor = UIColor.init(named: "AppFontColor")
         label.text = "\(title)"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)

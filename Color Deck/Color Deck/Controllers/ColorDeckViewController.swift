@@ -37,7 +37,7 @@ class ColorDeckViewController: UIViewController {
     
     // MARK: - CONFIG
     private func configUI() {
-        self.setupTitle(title: "Discover")
+        self.setupNavigation(title: "Discover")
         let swipeViewWidth: CGFloat = 250
         let swipeViewHeight: CGFloat = 350
         let swipeViewX = (view.bounds.width - swipeViewWidth) / 2
