@@ -40,7 +40,7 @@ class FavoritesViewModel {
     }
     
     // MARK: - RETRIEVE COLOR CODE
-    func retrieveColorCode(uuid: String) -> String{
+    func retrieveColorCode(uuid: String) -> String {
         var colorCode = ""
         self.favoritesRealm.getColorCode(forUUID: uuid) { favorite in
             colorCode = favorite.colorCode

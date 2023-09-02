@@ -46,13 +46,19 @@ class FavouriteColorViewController: UIViewController {
     // MARK: - CONFIG
     private func configUI(){
         self.setupNavigation(title: "Favourites")
-        let screenSize = view.bounds
-        let screenWidth = screenSize.width
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
-        layout.itemSize = CGSize(width: screenWidth/3, height: screenWidth/3 + 45)
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 5
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        let viewWidth = UIScreen.main.bounds.width
+        print(viewWidth)
+        if viewWidth < 350 {
+            layout.minimumLineSpacing = 5
+            layout.minimumInteritemSpacing = 5
+            layout.itemSize = CGSize(width: viewWidth/3.4, height: 150)
+        } else {
+            layout.minimumLineSpacing = 10
+            layout.minimumInteritemSpacing = 10
+            layout.itemSize = CGSize(width: viewWidth/3.5, height: 150)
+        }
         favouriteCollectionView.collectionViewLayout = layout
         favouriteCollectionView.register(UINib(nibName: "FavouriteColorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FavouriteColorCollectionViewCell")
     }
