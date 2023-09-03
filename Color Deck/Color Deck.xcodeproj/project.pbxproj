@@ -81,10 +81,10 @@
 		DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteColorCollectionViewCell.xib; sourceTree = "<group>"; };
 		DED425C42A9EE0E500243A77 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
-		DED425C62A9F0FAB00243A77 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = "Color Deck/Utils/Favorites.swift"; sourceTree = SOURCE_ROOT; };
+		DED425C62A9F0FAB00243A77 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = "Color Deck/Model/Favorites.swift"; sourceTree = SOURCE_ROOT; };
 		DED425C92A9F11D400243A77 /* FavoritesRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRealm.swift; sourceTree = "<group>"; };
 		DED425CB2A9F121D00243A77 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesViewModel.swift; path = "Color Deck/App Constants/FavoritesViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesViewModel.swift; path = "Color Deck/ViewModel/FavoritesViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		DEDCA9D62AA11FB40045AC81 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		DEDCA9D82AA11FC30045AC81 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		DEDCA9DA2AA11FD10045AC81 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -171,11 +171,11 @@
 			isa = PBXGroup;
 			children = (
 				DE0F62962915B0BD004E45DF /* General */,
-				DED425C82A9F118B00243A77 /* Realm */,
-				DE3BC8732A9E6728006F1036 /* Models */,
-				DE3BC8722A9E671D006F1036 /* ViewModel */,
+				DE6359132AA4F21400A6E997 /* Model */,
 				DE3BC8712A9E6718006F1036 /* View */,
+				DE6359142AA4F22200A6E997 /* ViewModel */,
 				DE0F62972915B0CC004E45DF /* Controllers */,
+				DED425C82A9F118B00243A77 /* Realm */,
 				DE0F62992915B0EB004E45DF /* Resources */,
 				DE9467F0291A3D31005DBA32 /* Utils */,
 				DE0F62742915A6C4004E45DF /* Info.plist */,
@@ -236,22 +236,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		DE3BC8722A9E671D006F1036 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		DE3BC8732A9E6728006F1036 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				DED425C62A9F0FAB00243A77 /* Favorites.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		DE3BC8742A9E6745006F1036 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +243,22 @@
 				DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */,
 			);
 			path = Xibs;
+			sourceTree = "<group>";
+		};
+		DE6359132AA4F21400A6E997 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DED425C62A9F0FAB00243A77 /* Favorites.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE6359142AA4F22200A6E997 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DE9467F0291A3D31005DBA32 /* Utils */ = {
