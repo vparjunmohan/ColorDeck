@@ -49,7 +49,6 @@ class FavouriteColorViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         let viewWidth = UIScreen.main.bounds.width
-        print(viewWidth)
         if viewWidth < 350 {
             layout.minimumLineSpacing = 5
             layout.minimumInteritemSpacing = 5
