@@ -22,6 +22,7 @@ class HistoryTableViewCell: UITableViewCell {
     }
 
     // MARK: - CONFIG
-    
-   
+    func setupCell(data: Favorites) {
+        self.colorView.backgroundColor = UIColor(hexString: data.colorCode)
+    }
 }

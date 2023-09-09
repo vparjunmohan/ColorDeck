@@ -22,6 +22,7 @@ class FavoritesRealm: NSObject {
         do {
             try realm.write {
                 realm.add(data, update: .all)
+                print(realm.configuration.fileURL?.path)
             }
         } catch let error {
             print("error saving video notes data to DB: ", error.localizedDescription)
@@ -66,6 +67,19 @@ class FavoritesRealm: NSObject {
         if filtered.count > 0 {
             let selectedColor = filtered.first!
             completion(selectedColor)
+        }
+    }
+    
+    // MARK: - RETRIEVE HISTORY
+    func fetchSwipeHistory(completion: (_ history: [Favorites]?) -> Void) {
+        var colorHistory: [Favorites]? = []
+        let data = realm.objects(Favorites.self)
+        let filtered = data.filter({ $0.showInHistory == true })
+        if filtered.count > 0 {
+            colorHistory?.append(contentsOf: filtered)
+            completion(colorHistory)
+        } else {
+            completion(nil)
         }
     }
 }

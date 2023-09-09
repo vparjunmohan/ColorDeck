@@ -52,10 +52,10 @@ class ColorDeckViewController: UIViewController {
 // MARK: - SWIPE VIEW DELEGATE
 extension ColorDeckViewController: SwipeViewDelegate {
     
-    func updateFavorites(uuid: String, isFavorite: Bool, colorCode: String) {
+    func updateFavorites(uuid: String, isFavorite: Bool, colorCode: String, createdAt: Int, updatedAt: Int) {
         guard let favoritesRealm else { return }
-        let data: [String:Any] = ["uuid": uuid, "isFavorite": isFavorite, "colorCode": colorCode]
-        favoritesRealm.addColorToFavorites(info: NSDictionary(dictionary: data))
+        let favData: [String:Any] = ["uuid": uuid, "isFavorite": isFavorite, "colorCode": colorCode, "showInHistory": true, "createdAt": createdAt, "updatedAt": updatedAt]
+        favoritesRealm.addColorToFavorites(info: NSDictionary(dictionary: favData))
     }
     
     func newSwipeViewAdded(swipeView: SwipeView) {
