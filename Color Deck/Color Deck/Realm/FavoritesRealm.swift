@@ -22,7 +22,6 @@ class FavoritesRealm: NSObject {
         do {
             try realm.write {
                 realm.add(data, update: .all)
-                print(realm.configuration.fileURL?.path)
             }
         } catch let error {
             print("error saving video notes data to DB: ", error.localizedDescription)
