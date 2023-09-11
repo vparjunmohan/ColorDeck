@@ -49,7 +49,6 @@ class FavouriteColorViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         let viewWidth = UIScreen.main.bounds.width
-        print(viewWidth)
         if viewWidth < 350 {
             layout.minimumLineSpacing = 5
             layout.minimumInteritemSpacing = 5
@@ -112,8 +111,10 @@ extension FavouriteColorViewController: FavouriteCollectionViewCellDelegate {
     }
     
     func removeTapped(uuid: String) {
-        guard let favoriteViewModel else { return }
-        favoriteViewModel.deleteColorWith(uuid: uuid)
+        guard let favoriteViewModel, let colorData = favoriteViewModel.retrieveColorData(uuid: uuid) else { return }
+        let updatedData = Favorites(uuid: colorData.uuid, isFavorite: false, colorCode: colorData.colorCode, showInHistory: true, createdAt: colorData.createdAt, updatedAt: Int(Date().timeIntervalSince1970))
+        favoritesRealm.saveFavoritesData(data: updatedData)
+        favoriteViewModel.fetchAllFavorites()
         self.setData()
         let identifier = ["uuid": uuid]
         NotificationCenter.default.post(name: .UpdateHeartButton, object: nil, userInfo: identifier)

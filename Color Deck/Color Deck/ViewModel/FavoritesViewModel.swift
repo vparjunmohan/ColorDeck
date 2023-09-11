@@ -20,7 +20,9 @@ class FavoritesViewModel {
     func fetchAllFavorites() {
         self.favoriteColors.removeAll()
         let data = self.favoritesRealm.retrieveFavorites()
-        let favorites = data.filter({ $0.isFavorite == true })
+        let favorites = data.filter({ $0.isFavorite == true }).sorted { val1, val2 in
+            val1.updatedAt > val2.updatedAt
+        }
         self.favoriteColors = favorites
     }
     
@@ -46,5 +48,14 @@ class FavoritesViewModel {
             colorCode = favorite.colorCode
         }
         return colorCode
+    }
+    
+    // MARK: - RETRIEVE COLOR DATA
+    func retrieveColorData(uuid: String) -> Favorites? {
+        var data: Favorites?
+        self.favoritesRealm.getColorCode(forUUID: uuid) { favourites in
+            data = favourites
+        }
+        return data
     }
 }

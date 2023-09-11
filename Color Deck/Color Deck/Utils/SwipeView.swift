@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol SwipeViewDelegate: AnyObject {
-    func updateFavorites(uuid: String, isFavorite: Bool, colorCode: String)
+    func updateFavorites(uuid: String, isFavorite: Bool, colorCode: String, createdAt: Int, updatedAt: Int)
     func newSwipeViewAdded(swipeView: SwipeView)
 }
 
@@ -18,6 +18,7 @@ class SwipeView: UIView {
     // MARK: - PROPERTIES
     private var heartButton: UIButton!
     weak var delegate: SwipeViewDelegate?
+    private let favoritesRealm = FavoritesRealm()
     
     // MARK: - LIFE CYCLE
     override init(frame: CGRect) {
@@ -106,7 +107,13 @@ class SwipeView: UIView {
         }) { _ in
             UIView.animate(withDuration: 0.5, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: { () -> Void in
                 currentSwipeView.alpha = 0
-            }) { completed in
+            }) { [weak self] completed in
+                guard let self, let swipeViewIdentifier = currentSwipeView.accessibilityIdentifier, let hexString = currentSwipeView.backgroundColor?.toHex() else { return }
+                if let currentColorData = FavoritesViewModel(favoritesRealm: self.favoritesRealm).retrieveColorData(uuid: swipeViewIdentifier) {
+                    self.delegate?.updateFavorites(uuid: currentColorData.uuid, isFavorite: currentColorData.isFavorite, colorCode: currentColorData.colorCode, createdAt: currentColorData.createdAt, updatedAt: currentColorData.updatedAt)
+                } else {
+                    self.delegate?.updateFavorites(uuid: swipeViewIdentifier, isFavorite: false, colorCode: hexString, createdAt: Int(Date().timeIntervalSince1970), updatedAt: Int(Date().timeIntervalSince1970))
+                }
                 currentSwipeView.removeFromSuperview()
             }
         }
@@ -116,10 +123,11 @@ class SwipeView: UIView {
         guard let swipeViewIdentifier = self.accessibilityIdentifier, let hexString = self.backgroundColor?.toHex() else { return }
         heartButton.isSelected.toggle()
         if heartButton.isSelected {
-            delegate?.updateFavorites(uuid: swipeViewIdentifier, isFavorite: true, colorCode: hexString)
+            delegate?.updateFavorites(uuid: swipeViewIdentifier, isFavorite: true, colorCode: hexString, createdAt: Int(Date().timeIntervalSince1970), updatedAt: Int(Date().timeIntervalSince1970))
             heartButton.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
         } else {
-            delegate?.updateFavorites(uuid: swipeViewIdentifier, isFavorite: false, colorCode: hexString)
+            guard let currentColorData = FavoritesViewModel(favoritesRealm: self.favoritesRealm).retrieveColorData(uuid: swipeViewIdentifier) else { return }
+            delegate?.updateFavorites(uuid: swipeViewIdentifier, isFavorite: false, colorCode: hexString, createdAt: currentColorData.createdAt, updatedAt: Int(Date().timeIntervalSince1970))
             heartButton.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
         }
     }
@@ -127,8 +135,13 @@ class SwipeView: UIView {
     @objc func updateHeartButton(_ notification: Notification) {
         if let dict = notification.userInfo as? [String:Any], let identifier = dict["uuid"] as? String {
             if self.accessibilityIdentifier == identifier {
-                heartButton.isSelected = false
-                heartButton.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
+                if heartButton.isSelected {
+                    heartButton.isSelected = false
+                    heartButton.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
+                } else {
+                    heartButton.isSelected = true
+                    heartButton.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
+                }
             }
         }
     }
