@@ -26,11 +26,16 @@ class FavouriteColorCollectionViewCell: UICollectionViewCell {
     // MARK: - LIFE CYLE
     override func awakeFromNib() {
         super.awakeFromNib()
-        colorView.addCornerRadius(radius: 8)
-        colorView.applyCommonDropShadow(radius: 4, opacity: 1)
+        self.configUI()
     }
     
     // MARK: - CONFIG
+    private func configUI() {
+        colorView.addCornerRadius(radius: 8)
+        colorView.applyCommonDropShadow(radius: 3, opacity: 0.6)
+    }
+    
+    // MARK: - HELPERS
     func setupCell(data: Favorites) {
         if data.isFavorite {
             self.hexLabel.text = data.colorCode
@@ -40,7 +45,7 @@ class FavouriteColorCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    
+    // MARK: - ACTIONS
     @IBAction func copyTapped(_ sender: UIButton) {
         guard let uuid = sender.accessibilityIdentifier else { return }
         delegate?.copyTapped(uuid: uuid)

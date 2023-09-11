@@ -135,8 +135,13 @@ class SwipeView: UIView {
     @objc func updateHeartButton(_ notification: Notification) {
         if let dict = notification.userInfo as? [String:Any], let identifier = dict["uuid"] as? String {
             if self.accessibilityIdentifier == identifier {
-                heartButton.isSelected = false
-                heartButton.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
+                if heartButton.isSelected {
+                    heartButton.isSelected = false
+                    heartButton.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
+                } else {
+                    heartButton.isSelected = true
+                    heartButton.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
+                }
             }
         }
     }

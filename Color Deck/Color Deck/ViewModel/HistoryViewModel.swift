@@ -22,9 +22,7 @@ class HistoryViewModel {
         self.favoritesRealm.fetchSwipeHistory { history in
             if history != nil {
                 guard let history else { return }
-                self.swipeHistory = history.sorted(by: { val1, val2 in
-                    val1.updatedAt > val2.updatedAt
-                })
+                self.swipeHistory = history.reversed()
             }
         }
     }
@@ -32,5 +30,14 @@ class HistoryViewModel {
     // MARK: - GET HISTORY COLORS
     func getHistoryColors() -> [Favorites] {
         return Array(self.swipeHistory.prefix(20))
+    }
+    
+    // MARK: - RETRIEVE COLOR DATA
+    func retrieveColorData(uuid: String) -> Favorites? {
+        var data: Favorites?
+        self.favoritesRealm.getColorCode(forUUID: uuid) { favourites in
+            data = favourites
+        }
+        return data
     }
 }

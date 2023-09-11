@@ -24,7 +24,7 @@ class FavoritesRealm: NSObject {
                 realm.add(data, update: .all)
             }
         } catch let error {
-            print("error saving video notes data to DB: ", error.localizedDescription)
+            print("error saving color data to DB: ", error.localizedDescription)
         }
     }
     

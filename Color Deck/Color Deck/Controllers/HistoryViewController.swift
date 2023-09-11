@@ -81,10 +81,31 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! HistoryTableViewCell
         cell.setupCell(data: historyColors[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+}
+
+// MARK: - HISTORY CELL DELEGATE
+extension HistoryViewController: HistoryCellDelegate {
+    
+    func heartTapped(uuid: String) {
+        guard let historyViewModel, let colorData = historyViewModel.retrieveColorData(uuid: uuid) else { return }
+        var updatedData: Favorites?
+        if colorData.isFavorite {
+            updatedData = Favorites(uuid: colorData.uuid, isFavorite: false, colorCode: colorData.colorCode, showInHistory: colorData.showInHistory, createdAt: colorData.createdAt, updatedAt: Int(Date().timeIntervalSince1970))
+        } else {
+            updatedData = Favorites(uuid: colorData.uuid, isFavorite: true, colorCode: colorData.colorCode, showInHistory: colorData.showInHistory, createdAt: colorData.createdAt, updatedAt: Int(Date().timeIntervalSince1970))
+        }
+        let identifier = ["uuid": colorData.uuid]
+        NotificationCenter.default.post(name: .UpdateHeartButton, object: nil, userInfo: identifier)
+        guard let updatedData else { return }
+        favoritesRealm.saveFavoritesData(data: updatedData)
+        historyViewModel.fetchHistory()
+        self.setData()
     }
 }
