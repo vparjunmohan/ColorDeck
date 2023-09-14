@@ -167,11 +167,11 @@
             </objects>
             <point key="canvasLocation" x="883" y="-795"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Discover-->
         <scene sceneID="OY2-K3-d1h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NvJ-Tz-iSt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house.fill" id="hch-QA-atQ"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="house" catalog="system" selectedImage="house.fill" id="hch-QA-atQ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gtv-un-zNZ">
@@ -192,11 +192,11 @@
             </objects>
             <point key="canvasLocation" x="-1620" y="3"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favourites-->
         <scene sceneID="ShT-Nc-djH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="svp-0c-nMf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" selectedImage="heart.fill" id="KAv-2z-7Wx"/>
+                    <tabBarItem key="tabBarItem" title="Favourites" image="heart" catalog="system" selectedImage="heart.fill" id="KAv-2z-7Wx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yD7-Gz-GWD">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -211,11 +211,11 @@
             </objects>
             <point key="canvasLocation" x="114" y="3"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--History-->
         <scene sceneID="yny-PG-KEi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gzA-wt-wHA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="list.bullet.rectangle.portrait" catalog="system" selectedImage="list.bullet.rectangle.portrait.fill" id="9Ax-K5-2cT"/>
+                    <tabBarItem key="tabBarItem" title="History" image="list.bullet.rectangle.portrait" catalog="system" selectedImage="list.bullet.rectangle.portrait.fill" id="9Ax-K5-2cT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hei-fh-P4s">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
