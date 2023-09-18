@@ -10,8 +10,6 @@ import RealmSwift
 
 class ColorDeckViewController: UIViewController {
     
-    // MARK: - OUTLETS
-    
     // MARK: - PROPERTIES
     var favoritesRealm: FavoritesRealm?
     
