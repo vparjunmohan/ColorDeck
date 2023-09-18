@@ -174,7 +174,7 @@ extension UIViewController {
     /// - Parameter message: Message to be displayed in String
     func showAlert(message: String) {
         let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+        let okAction = UIAlertAction(title: "Done", style: .default) { (_) in
         }
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
