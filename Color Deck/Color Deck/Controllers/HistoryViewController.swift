@@ -11,6 +11,7 @@ class HistoryViewController: UIViewController {
     
     // MARK: - OUTLETS
     @IBOutlet weak var historyTableView: UITableView!
+    @IBOutlet weak var noHistoryLabel: UILabel!
     
     // MARK: - PROPERTIES
     private let cellIdentifier = "HistoryTableViewCell"
@@ -56,16 +57,33 @@ class HistoryViewController: UIViewController {
         self.setData()
     }
     
+    private func configEmptyStates() {
+        if #available(iOS 17.0, *) {
+            self.noHistoryLabel.isHidden = true
+            var config = UIContentUnavailableConfiguration.empty()
+            config.image = UIImage(systemName: "list.bullet.rectangle.portrait")
+            config.imageProperties.tintColor = UIColor(resource: .appColorScheme)
+            config.text = "No History found"
+            config.secondaryText = "Your color history will appear here"
+            self.contentUnavailableConfiguration = config
+        } else {
+            self.noHistoryLabel.isHidden = false
+        }
+    }
+    
     // MARK: - HELPERS
     private func setData() {
         guard let historyViewModel else { return }
         self.historyColors.removeAll()
         let swipeHistory = historyViewModel.getHistoryColors()
         if swipeHistory.count > 0 {
-            // add a no history label
+            if #available(iOS 17.0, *) {
+                self.contentUnavailableConfiguration = nil
+            }
+            self.noHistoryLabel.isHidden = true
             self.historyColors = swipeHistory
         } else {
-            
+            self.configEmptyStates()
         }
         self.historyTableView.reloadData()
     }
