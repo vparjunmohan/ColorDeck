@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import KRProgressHUD
 
 class CommonWebViewViewController: UIViewController {
     
@@ -20,10 +21,6 @@ class CommonWebViewViewController: UIViewController {
     // MARK: - LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         self.configUI()
     }
     
@@ -35,17 +32,26 @@ class CommonWebViewViewController: UIViewController {
     deinit {
         self.webUrl = nil
     }
-
+    
     // MARK: - CONFIG
     private func configUI() {
         guard let webUrl else { return }
         self.webView.navigationDelegate = self
         self.setupBackButton(backButtonTitle: " \(navbarTitle)")
         self.webView.load(URLRequest(url: webUrl))
+        KRProgressHUD.set(activityIndicatorViewColors: [UIColor(resource: .appColorScheme)])
+        KRProgressHUD.set(style: .custom(background: UIColor.clear, text: UIColor.clear, icon: nil))
         self.tabBarController?.tabBar.isHidden = true
     }
 }
 
+// MARK: - WKNavigationDelegate
 extension CommonWebViewViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        KRProgressHUD.show()
+    }
     
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        KRProgressHUD.dismiss()
+    }
 }

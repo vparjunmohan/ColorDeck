@@ -38,7 +38,6 @@ class SettingsViewModel {
     }
     
     //MARK: - SETUP NAVIGATION FOR THE CELL
-    
     /// Function to setup didSelectRowAt for Settings TableView cell
     /// - Parameters:
     ///   - forRow: row id
