@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t8d-41-5KN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t8d-41-5KN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -114,10 +114,18 @@
                                     <outlet property="delegate" destination="pdB-ze-wFc" id="ffG-oi-UCp"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No history found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yF4-Hr-jcA">
+                                <rect key="frame" x="129" y="437" width="156" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" name="AppFontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iEh-Gb-rkw"/>
                         <color key="backgroundColor" name="AppBackground"/>
                         <constraints>
+                            <constraint firstItem="yF4-Hr-jcA" firstAttribute="centerY" secondItem="bx8-d1-Pi0" secondAttribute="centerY" id="6fK-T1-HJv"/>
+                            <constraint firstItem="yF4-Hr-jcA" firstAttribute="centerX" secondItem="bx8-d1-Pi0" secondAttribute="centerX" id="9df-nm-N3K"/>
                             <constraint firstItem="iEh-Gb-rkw" firstAttribute="bottom" secondItem="rwm-WF-pB7" secondAttribute="bottom" id="DIO-b6-3eY"/>
                             <constraint firstItem="rwm-WF-pB7" firstAttribute="top" secondItem="iEh-Gb-rkw" secondAttribute="top" constant="15" id="JFj-Ee-6rd"/>
                             <constraint firstItem="rwm-WF-pB7" firstAttribute="leading" secondItem="iEh-Gb-rkw" secondAttribute="leading" id="JkH-aw-Teg"/>
@@ -127,6 +135,7 @@
                     <navigationItem key="navigationItem" id="ZHK-wa-kK6"/>
                     <connections>
                         <outlet property="historyTableView" destination="rwm-WF-pB7" id="fwK-Dy-hkg"/>
+                        <outlet property="noHistoryLabel" destination="yF4-Hr-jcA" id="ozD-N7-KJA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8W-Kc-x1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

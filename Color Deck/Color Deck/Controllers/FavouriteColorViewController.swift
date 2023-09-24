@@ -62,6 +62,20 @@ class FavouriteColorViewController: UIViewController {
         favouriteCollectionView.register(UINib(nibName: "FavouriteColorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FavouriteColorCollectionViewCell")
     }
     
+    private func configEmptyStates() {
+        if #available(iOS 17.0, *) {
+            self.noColorLabel.isHidden = true
+            var config = UIContentUnavailableConfiguration.empty()
+            config.image = UIImage(systemName: "heart.fill")
+            config.imageProperties.tintColor = UIColor(resource: .appColorScheme)
+            config.text = "No Favourites found"
+            config.secondaryText = "Your favourite colors will appear here"
+            self.contentUnavailableConfiguration = config
+        } else {
+            self.noColorLabel.isHidden = false
+        }
+    }
+    
     // MARK: - HELPERS
     private func setupData() {
         self.favouriteCollectionView.flashScrollIndicators()
@@ -75,10 +89,13 @@ class FavouriteColorViewController: UIViewController {
         self.favouriteColors.removeAll()
         let colors = favoriteViewModel.getFavoriteColors()
         if colors.count > 0 {
+            if #available(iOS 17.0, *) {
+                self.contentUnavailableConfiguration = nil
+            }
             self.noColorLabel.isHidden = true
             self.favouriteColors = colors
         } else {
-            self.noColorLabel.isHidden = false
+            self.configEmptyStates()
         }
         self.favouriteCollectionView.reloadData()
     }
