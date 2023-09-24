@@ -42,6 +42,7 @@
 		DEE0EFAC2AC0678C000F71D1 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE0EFAA2AC0678C000F71D1 /* SettingsTableViewCell.swift */; };
 		DEE0EFAD2AC0678C000F71D1 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE0EFAB2AC0678C000F71D1 /* SettingsTableViewCell.xib */; };
 		DEE0EFAF2AC08238000F71D1 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE0EFAE2AC08238000F71D1 /* SettingsViewModel.swift */; };
+		DEE0EFB52AC0B769000F71D1 /* CommonWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE0EFB42AC0B769000F71D1 /* CommonWebViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		DEE0EFAA2AC0678C000F71D1 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		DEE0EFAB2AC0678C000F71D1 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		DEE0EFAE2AC08238000F71D1 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		DEE0EFB42AC0B769000F71D1 /* CommonWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonWebViewViewController.swift; sourceTree = "<group>"; };
 		ED3C15FA2070572B286EC743 /* Pods-Color Deck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Deck.release.xcconfig"; path = "Target Support Files/Pods-Color Deck/Pods-Color Deck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,10 +230,10 @@
 		DE0F62972915B0CC004E45DF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DE0F626A2915A6C3004E45DF /* ColorDeckViewController.swift */,
-				DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */,
-				DE6359152AA4F3F500A6E997 /* HistoryViewController.swift */,
-				DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */,
+				DEE0EFB12AC0B704000F71D1 /* DiscoverControllers */,
+				DEE0EFB22AC0B711000F71D1 /* FavouritesControllers */,
+				DEE0EFB32AC0B71B000F71D1 /* HistoryControllers */,
+				DEE0EFB02AC0B6E4000F71D1 /* SettingsControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -337,6 +339,39 @@
 				DEE0EFAB2AC0678C000F71D1 /* SettingsTableViewCell.xib */,
 			);
 			path = SettingsScreenXibs;
+			sourceTree = "<group>";
+		};
+		DEE0EFB02AC0B6E4000F71D1 /* SettingsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */,
+				DEE0EFB42AC0B769000F71D1 /* CommonWebViewViewController.swift */,
+			);
+			path = SettingsControllers;
+			sourceTree = "<group>";
+		};
+		DEE0EFB12AC0B704000F71D1 /* DiscoverControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F626A2915A6C3004E45DF /* ColorDeckViewController.swift */,
+			);
+			path = DiscoverControllers;
+			sourceTree = "<group>";
+		};
+		DEE0EFB22AC0B711000F71D1 /* FavouritesControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */,
+			);
+			path = FavouritesControllers;
+			sourceTree = "<group>";
+		};
+		DEE0EFB32AC0B71B000F71D1 /* HistoryControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE6359152AA4F3F500A6E997 /* HistoryViewController.swift */,
+			);
+			path = HistoryControllers;
 			sourceTree = "<group>";
 		};
 		DEE6C5C22A9F62E500E213D4 /* Storyboards */ = {
@@ -603,6 +638,7 @@
 				DE6359162AA4F3F500A6E997 /* HistoryViewController.swift in Sources */,
 				DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */,
 				DE0F62692915A6C3004E45DF /* SceneDelegate.swift in Sources */,
+				DEE0EFB52AC0B769000F71D1 /* CommonWebViewViewController.swift in Sources */,
 				DED425CA2A9F11D400243A77 /* FavoritesRealm.swift in Sources */,
 				DEE0EFAF2AC08238000F71D1 /* SettingsViewModel.swift in Sources */,
 				DE5932A12AB8A3AF00156066 /* SettingsViewController.swift in Sources */,

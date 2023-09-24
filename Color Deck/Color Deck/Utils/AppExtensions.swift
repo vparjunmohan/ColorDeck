@@ -101,8 +101,8 @@ extension UIViewController {
     /// - Parameter backButtonTitle: Title in String
     func setupBackButton(backButtonTitle: String) {
         let button = UIButton(type: .custom)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
-        button.setImage(UIImage(named: "backButtonImage"), for: .normal)
+        button.titleLabel?.font = UIFont(name: "Montserrat-Black", size: 30)
+        button.setImage(UIImage(named: "backButtonIcon"), for: .normal)
         button.setTitleColor(UIColor.init(named: "AppFontColor"), for: .normal)
         button.setTitle(backButtonTitle, for: .normal)
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)

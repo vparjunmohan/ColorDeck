@@ -47,8 +47,6 @@ class SettingsViewController: UIViewController {
         self.settingsTableView.dataSource = self
         self.settingsTableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingsTableViewCell")
     }
-    
-    // MARK: - HELPERS
 }
 
 // MARK: - UITABLEVIEW DELEGATE
@@ -67,5 +65,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel else { return }
+        viewModel.setupCellNavigation(forRow: indexPath.row, navController: self.navigationController)
     }
 }
