@@ -20,6 +20,7 @@
 		DE0F62882915A6C4004E45DF /* Color_DeckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62872915A6C4004E45DF /* Color_DeckUITests.swift */; };
 		DE0F628A2915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */; };
 		DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F629B2915B1D6004E45DF /* AppExtensions.swift */; };
+		DE5932A12AB8A3AF00156066 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */; };
 		DE6359162AA4F3F500A6E997 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6359152AA4F3F500A6E997 /* HistoryViewController.swift */; };
 		DE6359192AA4F68D00A6E997 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6359172AA4F68D00A6E997 /* HistoryTableViewCell.swift */; };
 		DE63591A2AA4F68D00A6E997 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE6359182AA4F68D00A6E997 /* HistoryTableViewCell.xib */; };
@@ -38,6 +39,9 @@
 		DEDCA9DB2AA11FD10045AC81 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEDCA9DA2AA11FD10045AC81 /* Montserrat-Bold.ttf */; };
 		DEDCA9DD2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEDCA9DC2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf */; };
 		DEDCA9DF2AA11FE90045AC81 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEDCA9DE2AA11FE90045AC81 /* Montserrat-Black.ttf */; };
+		DEE0EFAC2AC0678C000F71D1 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE0EFAA2AC0678C000F71D1 /* SettingsTableViewCell.swift */; };
+		DEE0EFAD2AC0678C000F71D1 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE0EFAB2AC0678C000F71D1 /* SettingsTableViewCell.xib */; };
+		DEE0EFAF2AC08238000F71D1 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE0EFAE2AC08238000F71D1 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,7 @@
 		DE0F62872915A6C4004E45DF /* Color_DeckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITests.swift; sourceTree = "<group>"; };
 		DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DE0F629B2915B1D6004E45DF /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DE6359152AA4F3F500A6E997 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		DE6359172AA4F68D00A6E997 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		DE6359182AA4F68D00A6E997 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -98,6 +103,9 @@
 		DEDCA9DA2AA11FD10045AC81 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		DEDCA9DC2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		DEDCA9DE2AA11FE90045AC81 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		DEE0EFAA2AC0678C000F71D1 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		DEE0EFAB2AC0678C000F71D1 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		DEE0EFAE2AC08238000F71D1 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		ED3C15FA2070572B286EC743 /* Pods-Color Deck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Color Deck.release.xcconfig"; path = "Target Support Files/Pods-Color Deck/Pods-Color Deck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +231,7 @@
 				DE0F626A2915A6C3004E45DF /* ColorDeckViewController.swift */,
 				DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */,
 				DE6359152AA4F3F500A6E997 /* HistoryViewController.swift */,
+				DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -248,10 +257,9 @@
 		DE3BC8742A9E6745006F1036 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */,
-				DE6359172AA4F68D00A6E997 /* HistoryTableViewCell.swift */,
-				DE6359182AA4F68D00A6E997 /* HistoryTableViewCell.xib */,
-				DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */,
+				DEE0EFA72AC06739000F71D1 /* FavouritesScreenXibs */,
+				DEE0EFA82AC06750000F71D1 /* HistoryScreenXibs */,
+				DEE0EFA92AC06767000F71D1 /* SettingsScreenXibs */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -269,6 +277,7 @@
 			children = (
 				DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */,
 				DED765D12AAC3CB800F86F9D /* HistoryViewModel.swift */,
+				DEE0EFAE2AC08238000F71D1 /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,6 +310,33 @@
 				DEDCA9D62AA11FB40045AC81 /* Montserrat-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DEE0EFA72AC06739000F71D1 /* FavouritesScreenXibs */ = {
+			isa = PBXGroup;
+			children = (
+				DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */,
+				DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */,
+			);
+			path = FavouritesScreenXibs;
+			sourceTree = "<group>";
+		};
+		DEE0EFA82AC06750000F71D1 /* HistoryScreenXibs */ = {
+			isa = PBXGroup;
+			children = (
+				DE6359182AA4F68D00A6E997 /* HistoryTableViewCell.xib */,
+				DE6359172AA4F68D00A6E997 /* HistoryTableViewCell.swift */,
+			);
+			path = HistoryScreenXibs;
+			sourceTree = "<group>";
+		};
+		DEE0EFA92AC06767000F71D1 /* SettingsScreenXibs */ = {
+			isa = PBXGroup;
+			children = (
+				DEE0EFAA2AC0678C000F71D1 /* SettingsTableViewCell.swift */,
+				DEE0EFAB2AC0678C000F71D1 /* SettingsTableViewCell.xib */,
+			);
+			path = SettingsScreenXibs;
 			sourceTree = "<group>";
 		};
 		DEE6C5C22A9F62E500E213D4 /* Storyboards */ = {
@@ -427,6 +463,7 @@
 				DE0F62732915A6C4004E45DF /* LaunchScreen.storyboard in Resources */,
 				DE0F62702915A6C4004E45DF /* Assets.xcassets in Resources */,
 				DEDCA9D72AA11FB40045AC81 /* Montserrat-Regular.ttf in Resources */,
+				DEE0EFAD2AC0678C000F71D1 /* SettingsTableViewCell.xib in Resources */,
 				DEDCA9DD2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf in Resources */,
 				DE88E97C2AA1432B0097C69F /* LaunchScreenIcon.png in Resources */,
 				DE0F626E2915A6C3004E45DF /* Main.storyboard in Resources */,
@@ -567,7 +604,10 @@
 				DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */,
 				DE0F62692915A6C3004E45DF /* SceneDelegate.swift in Sources */,
 				DED425CA2A9F11D400243A77 /* FavoritesRealm.swift in Sources */,
+				DEE0EFAF2AC08238000F71D1 /* SettingsViewModel.swift in Sources */,
+				DE5932A12AB8A3AF00156066 /* SettingsViewController.swift in Sources */,
 				DED425CC2A9F121D00243A77 /* Constants.swift in Sources */,
+				DEE0EFAC2AC0678C000F71D1 /* SettingsTableViewCell.swift in Sources */,
 				DED425CE2A9F19D100243A77 /* FavoritesViewModel.swift in Sources */,
 				DED425C72A9F0FAB00243A77 /* Favorites.swift in Sources */,
 				DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */,
