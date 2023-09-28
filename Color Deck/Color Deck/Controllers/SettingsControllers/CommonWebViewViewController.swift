@@ -26,7 +26,7 @@ class CommonWebViewViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = false
+        self.showTabBar()
     }
     
     deinit {
@@ -35,13 +35,14 @@ class CommonWebViewViewController: UIViewController {
     
     // MARK: - CONFIG
     private func configUI() {
+        self.setupTheme()
         guard let webUrl else { return }
         self.webView.navigationDelegate = self
         self.setupBackButton(backButtonTitle: " \(navbarTitle)")
         self.webView.load(URLRequest(url: webUrl))
         KRProgressHUD.set(activityIndicatorViewColors: [UIColor(resource: .appColorScheme)])
         KRProgressHUD.set(style: .custom(background: UIColor.clear, text: UIColor.clear, icon: nil))
-        self.tabBarController?.tabBar.isHidden = true
+        self.hideTabBar()
     }
 }
 

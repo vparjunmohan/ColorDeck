@@ -20,6 +20,7 @@
 		DE0F62882915A6C4004E45DF /* Color_DeckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62872915A6C4004E45DF /* Color_DeckUITests.swift */; };
 		DE0F628A2915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */; };
 		DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F629B2915B1D6004E45DF /* AppExtensions.swift */; };
+		DE35C3012AC55B5D00B5F0A5 /* AppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE35C3002AC55B5D00B5F0A5 /* AppearanceViewController.swift */; };
 		DE5932A12AB8A3AF00156066 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */; };
 		DE6359162AA4F3F500A6E997 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6359152AA4F3F500A6E997 /* HistoryViewController.swift */; };
 		DE6359192AA4F68D00A6E997 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6359172AA4F68D00A6E997 /* HistoryTableViewCell.swift */; };
@@ -84,7 +85,8 @@
 		DE0F62832915A6C4004E45DF /* Color DeckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Color DeckUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0F62872915A6C4004E45DF /* Color_DeckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITests.swift; sourceTree = "<group>"; };
 		DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		DE0F629B2915B1D6004E45DF /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
+		DE0F629B2915B1D6004E45DF /* AppExtensions.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; tabWidth = 4; };
+		DE35C3002AC55B5D00B5F0A5 /* AppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceViewController.swift; sourceTree = "<group>"; };
 		DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DE6359152AA4F3F500A6E997 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		DE6359172AA4F68D00A6E997 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			children = (
 				DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */,
 				DEE0EFB42AC0B769000F71D1 /* CommonWebViewViewController.swift */,
+				DE35C3002AC55B5D00B5F0A5 /* AppearanceViewController.swift */,
 			);
 			path = SettingsControllers;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				DE5932A12AB8A3AF00156066 /* SettingsViewController.swift in Sources */,
 				DED425CC2A9F121D00243A77 /* Constants.swift in Sources */,
 				DEE0EFAC2AC0678C000F71D1 /* SettingsTableViewCell.swift in Sources */,
+				DE35C3012AC55B5D00B5F0A5 /* AppearanceViewController.swift in Sources */,
 				DED425CE2A9F19D100243A77 /* FavoritesViewModel.swift in Sources */,
 				DED425C72A9F0FAB00243A77 /* Favorites.swift in Sources */,
 				DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */,

@@ -45,6 +45,7 @@ class FavouriteColorViewController: UIViewController {
     
     // MARK: - CONFIG
     private func configUI(){
+        self.setupTheme()
         self.setupNavigation(title: "Favourites")
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)

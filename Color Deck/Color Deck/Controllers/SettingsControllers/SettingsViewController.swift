@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var settingsTableView: UITableView!
     
     // MARK: - PROPERTIES
-    let contents: [String] = ["Theme", "Formats", "Copy Sound", "Website", "Privacy Policy", "Contact Us", "Rate App", "Version"]
+    let contents: [String] = ["Appearance", "Formats", "Copy Sound", "Website", "Privacy Policy", "Contact Us", "Rate App", "Version"]
     var viewModel: SettingsViewModel?
     
     // MARK: - LIFE CYCLE
@@ -39,6 +39,7 @@ class SettingsViewController: UIViewController {
     
     // MARK: - CONFIG
     private func configUI() {
+        self.setupTheme()
         self.setupNavigation(title: "Settings")
     }
     
@@ -64,7 +65,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 70
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

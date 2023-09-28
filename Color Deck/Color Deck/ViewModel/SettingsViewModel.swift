@@ -45,7 +45,8 @@ class SettingsViewModel {
     func setupCellNavigation(forRow: Int, navController: UINavigationController?) {
         switch forRow {
         case 0:
-            print("theme")
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AppearanceViewController") as! AppearanceViewController
+            navController?.pushViewController(vc, animated: true)
         case 1:
             print("formats")
         case 2:

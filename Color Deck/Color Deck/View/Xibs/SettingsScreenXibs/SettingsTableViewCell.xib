@@ -49,7 +49,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rX6-EC-7HK">
-                                <rect key="frame" x="234" y="20.666666666666668" width="44" height="20.000000000000004"/>
+                                <rect key="frame" x="234" y="21.333333333333329" width="44" height="18.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                 <color key="textColor" name="AppFontColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,8 +80,11 @@
             <connections>
                 <outlet property="containerView" destination="bSP-pa-AMo" id="KyI-pw-7hb"/>
                 <outlet property="contentLabel" destination="41R-Lf-yiu" id="8lx-Mc-3gi"/>
+                <outlet property="contentLabelLeading" destination="faL-CQ-iae" id="Yib-Gt-rbe"/>
+                <outlet property="optionImageViewTrailing" destination="mt7-Bk-XL6" id="8x2-Kp-Wkg"/>
                 <outlet property="optionsImageView" destination="rX1-Gu-1v6" id="9xT-sc-HQN"/>
                 <outlet property="titleImageView" destination="Qg6-8l-DaQ" id="RN2-VE-bo7"/>
+                <outlet property="titleImageViewWidth" destination="bU9-W2-OOM" id="1f7-gW-XWh"/>
                 <outlet property="versionLabel" destination="rX6-EC-7HK" id="Sjy-BM-etC"/>
             </connections>
             <point key="canvasLocation" x="-25.190839694656489" y="29.225352112676056"/>
@@ -93,7 +96,7 @@
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppColorScheme">
-            <color red="0.51800000667572021" green="0.27799999713897705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.51764705882352946" green="0.27450980392156865" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppFontColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

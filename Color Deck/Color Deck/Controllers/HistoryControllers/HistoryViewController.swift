@@ -46,6 +46,7 @@ class HistoryViewController: UIViewController {
     
     // MARK: - CONFIG
     private func configUI() {
+        self.setupTheme()
         self.setupNavigation(title: "History")
         self.historyTableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
