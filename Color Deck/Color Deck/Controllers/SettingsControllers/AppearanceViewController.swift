@@ -15,8 +15,19 @@ class AppearanceViewController: UIViewController {
     // MARK: - PROPERTIES
     let appearanceOptions = ["Light", "Dark", "System"]
     var selectedIndex: Int!
+    var appearanceViewModel: AppearanceViewModel?
     
     // MARK: - LIFE CYCLE
+    init(vm: AppearanceViewModel) {
+        self.appearanceViewModel = vm
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.appearanceViewModel = AppearanceViewModel()
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configUI()
@@ -27,14 +38,19 @@ class AppearanceViewController: UIViewController {
         self.showTabBar()
     }
     
+    deinit {
+        self.appearanceViewModel = nil
+    }
+    
     // MARK: - CONFIG
     private func configUI() {
         self.setupTheme()
         self.hideTabBar()
         self.appearanceTableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingsTableViewCell")
         self.setupBackButton(backButtonTitle: " Appearance")
-        if let selectedAppearance = UserDefaults.standard.object(forKey: "selectedAppearance") as? Int {
-            self.selectedIndex = selectedAppearance
+        guard let appearanceViewModel else { return }
+        appearanceViewModel.getSavedAppearance { selectedIndex in
+            self.selectedIndex = selectedIndex
             self.appearanceTableView.reloadData()
         }
     }
@@ -58,25 +74,8 @@ extension AppearanceViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            UIApplication.shared.connectedScenes
-                .compactMap { $0 as? UIWindowScene }
-                .flatMap { $0.windows }
-                .forEach { $0.overrideUserInterfaceStyle = .light }
-        case 1:
-            UIApplication.shared.connectedScenes
-                .compactMap { $0 as? UIWindowScene }
-                .flatMap { $0.windows }
-                .forEach { $0.overrideUserInterfaceStyle = .dark }
-        case 2:
-            UIApplication.shared.connectedScenes
-                .compactMap { $0 as? UIWindowScene }
-                .flatMap { $0.windows }
-                .forEach { $0.overrideUserInterfaceStyle = .unspecified }
-        default:
-            return
-        }
+        guard let appearanceViewModel else { return }
+        appearanceViewModel.configAppearance(forRow: indexPath.row)
         self.selectedIndex = indexPath.row
         UserDefaults.standard.set(self.selectedIndex, forKey: "selectedAppearance")
         tableView.reloadData()

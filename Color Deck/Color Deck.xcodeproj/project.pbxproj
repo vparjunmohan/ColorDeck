@@ -29,6 +29,7 @@
 		DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */; };
 		DE9467EE291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */; };
 		DE9467EF291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */; };
+		DEB387642AC60EDE00A76964 /* AppearanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB387632AC60EDE00A76964 /* AppearanceViewModel.swift */; };
 		DED425C52A9EE0E500243A77 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425C42A9EE0E500243A77 /* SwipeView.swift */; };
 		DED425C72A9F0FAB00243A77 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425C62A9F0FAB00243A77 /* Favorites.swift */; };
 		DED425CA2A9F11D400243A77 /* FavoritesRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED425C92A9F11D400243A77 /* FavoritesRealm.swift */; };
@@ -95,6 +96,7 @@
 		DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorViewController.swift; sourceTree = "<group>"; };
 		DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE9467ED291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteColorCollectionViewCell.xib; sourceTree = "<group>"; };
+		DEB387632AC60EDE00A76964 /* AppearanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceViewModel.swift; sourceTree = "<group>"; };
 		DED425C42A9EE0E500243A77 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		DED425C62A9F0FAB00243A77 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = "Color Deck/Model/Favorites.swift"; sourceTree = SOURCE_ROOT; };
 		DED425C92A9F11D400243A77 /* FavoritesRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRealm.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				DED425CD2A9F19D100243A77 /* FavoritesViewModel.swift */,
 				DED765D12AAC3CB800F86F9D /* HistoryViewModel.swift */,
 				DEE0EFAE2AC08238000F71D1 /* SettingsViewModel.swift */,
+				DEB387632AC60EDE00A76964 /* AppearanceViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				DED425C52A9EE0E500243A77 /* SwipeView.swift in Sources */,
 				DE6359192AA4F68D00A6E997 /* HistoryTableViewCell.swift in Sources */,
 				DE0F62672915A6C3004E45DF /* AppDelegate.swift in Sources */,
+				DEB387642AC60EDE00A76964 /* AppearanceViewModel.swift in Sources */,
 				DE6359162AA4F3F500A6E997 /* HistoryViewController.swift in Sources */,
 				DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */,
 				DE0F62692915A6C3004E45DF /* SceneDelegate.swift in Sources */,
