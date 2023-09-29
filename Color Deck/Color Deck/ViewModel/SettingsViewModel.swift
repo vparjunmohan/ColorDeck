@@ -50,7 +50,8 @@ class SettingsViewModel {
         case 1:
             print("formats")
         case 2:
-            print("copy sound")
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CopySoundsViewController") as! CopySoundsViewController
+            navController?.pushViewController(vc, animated: true)
         case 3:
             let vc = self.setupViewController(title: "Website", url: "https://vparjunmohan.wixsite.com/colordeck")
             navController?.pushViewController(vc, animated: true)

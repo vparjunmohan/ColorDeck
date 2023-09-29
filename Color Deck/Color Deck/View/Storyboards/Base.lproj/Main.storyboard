@@ -116,7 +116,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No history found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yF4-Hr-jcA">
-                                <rect key="frame" x="129" y="437" width="156" height="22"/>
+                                <rect key="frame" x="129.5" y="437" width="155.5" height="22"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                 <color key="textColor" name="AppFontColor"/>
                                 <nil key="highlightedColor"/>
@@ -223,16 +223,35 @@
             </objects>
             <point key="canvasLocation" x="2008.6956521739132" y="377.67857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Copy Sounds View Controller-->
         <scene sceneID="h1A-7f-9h4">
             <objects>
-                <viewController id="ntS-Hb-ktx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CopySoundsViewController" id="ntS-Hb-ktx" customClass="CopySoundsViewController" customModule="Color_Deck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bok-87-iya">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bX8-Kl-v0z">
+                                <rect key="frame" x="0.0" y="63" width="414" height="799"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ntS-Hb-ktx" id="W0W-9b-OjI"/>
+                                    <outlet property="delegate" destination="ntS-Hb-ktx" id="C1Q-p4-lAz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="V7b-nd-yMJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="V7b-nd-yMJ" firstAttribute="bottom" secondItem="bX8-Kl-v0z" secondAttribute="bottom" id="OCs-Qq-P3l"/>
+                            <constraint firstItem="bX8-Kl-v0z" firstAttribute="top" secondItem="V7b-nd-yMJ" secondAttribute="top" constant="15" id="SBs-zX-8R1"/>
+                            <constraint firstItem="bX8-Kl-v0z" firstAttribute="leading" secondItem="V7b-nd-yMJ" secondAttribute="leading" id="ZtX-XV-lKr"/>
+                            <constraint firstItem="V7b-nd-yMJ" firstAttribute="trailing" secondItem="bX8-Kl-v0z" secondAttribute="trailing" id="vQe-SE-3Ea"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="soundsTableView" destination="bX8-Kl-v0z" id="d9k-jm-SyN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5f5-cC-v7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

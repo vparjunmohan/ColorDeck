@@ -49,4 +49,12 @@ class SettingsTableViewCell: UITableViewCell {
         self.contentLabelLeading.constant = 12
         self.optionImageViewTrailing.constant = 15
     }
+    
+    // MARK: - SETUP COPY SOUND CELL
+    func configCopySound(title: String) {
+        self.versionLabel.isHidden = true
+        self.contentLabel.text = title
+        self.titleImageView.image = UIImage(resource: .soundIcon)
+        self.optionsImageView.image = UIImage(systemName: "checkmark.circle.fill")
+    }
 }

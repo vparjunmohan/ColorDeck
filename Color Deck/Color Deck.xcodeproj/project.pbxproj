@@ -20,6 +20,12 @@
 		DE0F62882915A6C4004E45DF /* Color_DeckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62872915A6C4004E45DF /* Color_DeckUITests.swift */; };
 		DE0F628A2915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */; };
 		DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F629B2915B1D6004E45DF /* AppExtensions.swift */; };
+		DE1C0C4B2AC7288E0036FC9C /* Bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE1C0C472AC7288E0036FC9C /* Bell.mp3 */; };
+		DE1C0C4C2AC7288E0036FC9C /* Pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE1C0C482AC7288E0036FC9C /* Pop.mp3 */; };
+		DE1C0C4E2AC728C30036FC9C /* CopySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1C0C4D2AC728C30036FC9C /* CopySoundsViewController.swift */; };
+		DE1C0C562AC72F780036FC9C /* Message.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE1C0C552AC72F780036FC9C /* Message.mp3 */; };
+		DE1C0C582AC72FD20036FC9C /* Cool.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE1C0C572AC72FD20036FC9C /* Cool.mp3 */; };
+		DE1C0C5A2AC731400036FC9C /* Soft.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE1C0C592AC731400036FC9C /* Soft.mp3 */; };
 		DE35C3012AC55B5D00B5F0A5 /* AppearanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE35C3002AC55B5D00B5F0A5 /* AppearanceViewController.swift */; };
 		DE5932A12AB8A3AF00156066 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */; };
 		DE6359162AA4F3F500A6E997 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6359152AA4F3F500A6E997 /* HistoryViewController.swift */; };
@@ -87,6 +93,12 @@
 		DE0F62872915A6C4004E45DF /* Color_DeckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITests.swift; sourceTree = "<group>"; };
 		DE0F62892915A6C4004E45DF /* Color_DeckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_DeckUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DE0F629B2915B1D6004E45DF /* AppExtensions.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; tabWidth = 4; };
+		DE1C0C472AC7288E0036FC9C /* Bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bell.mp3; sourceTree = "<group>"; };
+		DE1C0C482AC7288E0036FC9C /* Pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pop.mp3; sourceTree = "<group>"; };
+		DE1C0C4D2AC728C30036FC9C /* CopySoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopySoundsViewController.swift; sourceTree = "<group>"; };
+		DE1C0C552AC72F780036FC9C /* Message.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Message.mp3; sourceTree = "<group>"; };
+		DE1C0C572AC72FD20036FC9C /* Cool.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Cool.mp3; sourceTree = "<group>"; };
+		DE1C0C592AC731400036FC9C /* Soft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Soft.mp3; sourceTree = "<group>"; };
 		DE35C3002AC55B5D00B5F0A5 /* AppearanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceViewController.swift; sourceTree = "<group>"; };
 		DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DE6359152AA4F3F500A6E997 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -245,10 +257,23 @@
 		DE0F62992915B0EB004E45DF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DE1C0C442AC727E90036FC9C /* Sounds */,
 				DEDCA9D52AA11F9C0045AC81 /* Fonts */,
 				DE0F626F2915A6C4004E45DF /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DE1C0C442AC727E90036FC9C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DE1C0C472AC7288E0036FC9C /* Bell.mp3 */,
+				DE1C0C572AC72FD20036FC9C /* Cool.mp3 */,
+				DE1C0C482AC7288E0036FC9C /* Pop.mp3 */,
+				DE1C0C552AC72F780036FC9C /* Message.mp3 */,
+				DE1C0C592AC731400036FC9C /* Soft.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		DE3BC8712A9E6718006F1036 /* View */ = {
@@ -352,6 +377,7 @@
 				DE5932A02AB8A3AF00156066 /* SettingsViewController.swift */,
 				DEE0EFB42AC0B769000F71D1 /* CommonWebViewViewController.swift */,
 				DE35C3002AC55B5D00B5F0A5 /* AppearanceViewController.swift */,
+				DE1C0C4D2AC728C30036FC9C /* CopySoundsViewController.swift */,
 			);
 			path = SettingsControllers;
 			sourceTree = "<group>";
@@ -498,16 +524,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1C0C5A2AC731400036FC9C /* Soft.mp3 in Resources */,
 				DEDCA9D92AA11FC30045AC81 /* Montserrat-SemiBold.ttf in Resources */,
 				DE9467EF291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.xib in Resources */,
 				DE63591A2AA4F68D00A6E997 /* HistoryTableViewCell.xib in Resources */,
 				DE0F62732915A6C4004E45DF /* LaunchScreen.storyboard in Resources */,
 				DE0F62702915A6C4004E45DF /* Assets.xcassets in Resources */,
 				DEDCA9D72AA11FB40045AC81 /* Montserrat-Regular.ttf in Resources */,
+				DE1C0C562AC72F780036FC9C /* Message.mp3 in Resources */,
+				DE1C0C582AC72FD20036FC9C /* Cool.mp3 in Resources */,
 				DEE0EFAD2AC0678C000F71D1 /* SettingsTableViewCell.xib in Resources */,
+				DE1C0C4B2AC7288E0036FC9C /* Bell.mp3 in Resources */,
 				DEDCA9DD2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf in Resources */,
 				DE88E97C2AA1432B0097C69F /* LaunchScreenIcon.png in Resources */,
 				DE0F626E2915A6C3004E45DF /* Main.storyboard in Resources */,
+				DE1C0C4C2AC7288E0036FC9C /* Pop.mp3 in Resources */,
 				DEDCA9DB2AA11FD10045AC81 /* Montserrat-Bold.ttf in Resources */,
 				DEDCA9DF2AA11FE90045AC81 /* Montserrat-Black.ttf in Resources */,
 			);
@@ -654,6 +685,7 @@
 				DE35C3012AC55B5D00B5F0A5 /* AppearanceViewController.swift in Sources */,
 				DED425CE2A9F19D100243A77 /* FavoritesViewModel.swift in Sources */,
 				DED425C72A9F0FAB00243A77 /* Favorites.swift in Sources */,
+				DE1C0C4E2AC728C30036FC9C /* CopySoundsViewController.swift in Sources */,
 				DE0F629C2915B1D6004E45DF /* AppExtensions.swift in Sources */,
 				DE9467EE291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift in Sources */,
 				DED765D22AAC3CB800F86F9D /* HistoryViewModel.swift in Sources */,
