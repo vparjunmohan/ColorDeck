@@ -217,4 +217,11 @@ extension AppDelegate {
                 .forEach { $0.overrideUserInterfaceStyle = .unspecified }
         }
     }
+    
+    func configSelectedCopySound() {
+        guard let selectedCopySound = UserDefaults.standard.object(forKey: "selectedCopySound") as? Int else {
+            UserDefaults.standard.set(0, forKey: "selectedCopySound")
+            return
+        }
+    }
 }

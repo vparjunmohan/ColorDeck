@@ -51,9 +51,10 @@ class SettingsTableViewCell: UITableViewCell {
     }
     
     // MARK: - SETUP COPY SOUND CELL
-    func configCopySound(title: String) {
+    func configCopySound(title: String, shouldHide: Bool) {
         self.versionLabel.isHidden = true
         self.contentLabel.text = title
+        self.optionsImageView.isHidden = shouldHide
         self.titleImageView.image = UIImage(resource: .soundIcon)
         self.optionsImageView.image = UIImage(systemName: "checkmark.circle.fill")
     }

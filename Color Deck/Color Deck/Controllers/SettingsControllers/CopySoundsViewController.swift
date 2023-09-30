@@ -16,8 +16,20 @@ class CopySoundsViewController: UIViewController {
     // MARK: - PROPERTIES
     let audioFileNames = ["None", "Bell", "Cool", "Message", "Pop", "Soft"]
     var audioPlayers: [AVAudioPlayer] = []
+    var selectedIndex: Int!
+    var copySoundViewModel: CopySoundsViewModel?
     
     // MARK: - LIFE CYCLE
+    init(vm: CopySoundsViewModel) {
+        self.copySoundViewModel = vm
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.copySoundViewModel = CopySoundsViewModel()
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.global().async { [weak self] in
@@ -39,14 +51,24 @@ class CopySoundsViewController: UIViewController {
         self.showTabBar()
     }
     
+    deinit{
+        self.copySoundViewModel = nil
+    }
+    
     // MARK: - CONFIG
     private func configUI() {
         self.setupTheme()
         self.hideTabBar()
         self.soundsTableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingsTableViewCell")
-        self.setupBackButton(backButtonTitle: " Copy Sounds")
+        self.setupBackButton(backButtonTitle: " Copy Sound")
+        guard let copySoundViewModel else { return }
+        copySoundViewModel.getSavedCopySoundIndex { selectedIndex in
+            self.selectedIndex = selectedIndex
+            self.soundsTableView.reloadData()
+        }
     }
 }
+
 // MARK: - TABLEVIEW DELEGATE
 extension CopySoundsViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -56,26 +78,30 @@ extension CopySoundsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell", for: indexPath) as! SettingsTableViewCell
-        cell.configCopySound(title: self.audioFileNames[indexPath.row])
+        if indexPath.row == selectedIndex {
+            cell.configCopySound(title: self.audioFileNames[indexPath.row], shouldHide: false)
+        } else {
+            cell.configCopySound(title: self.audioFileNames[indexPath.row], shouldHide: true)
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            // If "None" is selected, do nothing (play no audio)
-            // You can add any specific behavior for "None" here if needed
-            return
+        switch indexPath.row {
+        case 0: // If "None" is selected, do nothing (play no audio)
+            break
+        default:
+            let audioIndex = indexPath.row - 1
+            if audioIndex < audioPlayers.count {
+                audioPlayers[audioIndex].play()
+            }
         }
-        
-        // Play the selected audio
-        let audioIndex = indexPath.row - 1 // Adjust index to skip "None"
-        if audioIndex < audioPlayers.count {
-            audioPlayers[audioIndex].play()
-        }
+        self.selectedIndex = indexPath.row
+        UserDefaults.standard.set(self.selectedIndex, forKey: "selectedCopySound")
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
 }
-
