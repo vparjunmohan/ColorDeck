@@ -64,7 +64,7 @@ class HistoryViewController: UIViewController {
             var config = UIContentUnavailableConfiguration.empty()
             config.image = UIImage(systemName: "list.bullet.rectangle.portrait")
             config.imageProperties.tintColor = UIColor(resource: .appColorScheme)
-            config.text = "No History found"
+            config.text = "No history found"
             config.secondaryText = "Your color history will appear here"
             self.contentUnavailableConfiguration = config
         } else {

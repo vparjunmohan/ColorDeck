@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import AVFoundation
 
 class CopySoundsViewController: UIViewController {
     
@@ -15,7 +14,6 @@ class CopySoundsViewController: UIViewController {
     
     // MARK: - PROPERTIES
     let audioFileNames = ["None", "Bell", "Cool", "Message", "Pop", "Soft"]
-    var audioPlayers: [AVAudioPlayer] = []
     var selectedIndex: Int!
     var copySoundViewModel: CopySoundsViewModel?
     
@@ -32,17 +30,6 @@ class CopySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.global().async { [weak self] in
-            guard let self else { return }
-            // Initialize AVAudioPlayer instances for each audio file except "None"
-            for fileName in self.audioFileNames.dropFirst() {
-                if let audioPath = Bundle.main.path(forResource: fileName, ofType: ".mp3") {
-                    if let audioPlayer = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath)) {
-                        self.audioPlayers.append(audioPlayer)
-                    }
-                }
-            }
-        }
         self.configUI()
     }
     
@@ -91,10 +78,8 @@ extension CopySoundsViewController: UITableViewDelegate, UITableViewDataSource {
         case 0: // If "None" is selected, do nothing (play no audio)
             break
         default:
-            let audioIndex = indexPath.row - 1
-            if audioIndex < audioPlayers.count {
-                audioPlayers[audioIndex].play()
-            }
+            guard let copySoundViewModel else { return }
+            copySoundViewModel.playCopySound(index: indexPath.row)
         }
         self.selectedIndex = indexPath.row
         UserDefaults.standard.set(self.selectedIndex, forKey: "selectedCopySound")

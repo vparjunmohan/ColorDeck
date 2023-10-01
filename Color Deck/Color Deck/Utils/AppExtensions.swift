@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 // MARK: - CGFloat
 extension CGFloat {
@@ -219,7 +220,18 @@ extension AppDelegate {
     }
     
     func configSelectedCopySound() {
-        guard let selectedCopySound = UserDefaults.standard.object(forKey: "selectedCopySound") as? Int else {
+        DispatchQueue.global().async {
+            AUDIOPLAYERS.removeAll()
+            for fileName in AUDIOFILENAMES {
+                if let audioPath = Bundle.main.path(forResource: fileName, ofType: ".mp3") {
+                    if let audioPlayer = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath)) {
+                        AUDIOPLAYERS.append(audioPlayer)
+                    }
+                }
+            }
+        }
+        
+        guard let _ = UserDefaults.standard.object(forKey: "selectedCopySound") as? Int else {
             UserDefaults.standard.set(0, forKey: "selectedCopySound")
             return
         }

@@ -17,4 +17,9 @@ class CopySoundsViewModel {
             completion(selectedSoundIndex)
         }
     }
+    
+    // MARK: - PLAY SOUND FOR COPY
+    func playCopySound(index: Int) {
+        AUDIOPLAYERS[index-1].play()
+    }
 }

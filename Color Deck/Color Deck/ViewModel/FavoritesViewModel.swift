@@ -37,7 +37,7 @@ class FavoritesViewModel {
             if success {
                 self.favoriteColors.removeAll()
                 self.fetchAllFavorites()
-            } 
+            }
         }
     }
     
@@ -57,5 +57,15 @@ class FavoritesViewModel {
             data = favourites
         }
         return data
+    }
+    
+    // MARK: - PLAY SOUND FOR COPY
+    func playCopySound() {
+        if let savedSoundIndex = UserDefaults.standard.value(forKey: "selectedCopySound") as? Int {
+            if savedSoundIndex != 0 {
+                let audioIndex = savedSoundIndex - 1
+                AUDIOPLAYERS[audioIndex].play()
+            }
+        }
     }
 }

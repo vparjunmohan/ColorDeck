@@ -67,9 +67,9 @@ class FavouriteColorViewController: UIViewController {
         if #available(iOS 17.0, *) {
             self.noColorLabel.isHidden = true
             var config = UIContentUnavailableConfiguration.empty()
-            config.image = UIImage(systemName: "heart.fill")
+            config.image = UIImage(systemName: "heart")
             config.imageProperties.tintColor = UIColor(resource: .appColorScheme)
-            config.text = "No Favourites found"
+            config.text = "No favourites found"
             config.secondaryText = "Your favourite colors will appear here"
             self.contentUnavailableConfiguration = config
         } else {
@@ -126,6 +126,7 @@ extension FavouriteColorViewController: FavouriteCollectionViewCellDelegate {
         let colorCode = favoriteViewModel.retrieveColorCode(uuid: uuid)
         UIPasteboard.general.string = colorCode
         self.showAlert(message: "Copied color code \(colorCode)")
+        favoriteViewModel.playCopySound()
     }
     
     func removeTapped(uuid: String) {
