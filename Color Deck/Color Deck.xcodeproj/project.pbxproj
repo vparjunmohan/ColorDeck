@@ -32,6 +32,9 @@
 		DE6359192AA4F68D00A6E997 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6359172AA4F68D00A6E997 /* HistoryTableViewCell.swift */; };
 		DE63591A2AA4F68D00A6E997 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE6359182AA4F68D00A6E997 /* HistoryTableViewCell.xib */; };
 		DE7660B42AC84D6C008FCAC4 /* CopySoundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7660B32AC84D6C008FCAC4 /* CopySoundsViewModel.swift */; };
+		DE86C0EB2AC9EC5E0021B382 /* FormatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE86C0EA2AC9EC5E0021B382 /* FormatsViewController.swift */; };
+		DE86C0EE2AC9EE180021B382 /* ToggleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE86C0EC2AC9EE180021B382 /* ToggleTableViewCell.swift */; };
+		DE86C0EF2AC9EE180021B382 /* ToggleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE86C0ED2AC9EE180021B382 /* ToggleTableViewCell.xib */; };
 		DE88E97C2AA1432B0097C69F /* LaunchScreenIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE88E97B2AA1432B0097C69F /* LaunchScreenIcon.png */; };
 		DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */; };
 		DE9467EE291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */; };
@@ -106,6 +109,9 @@
 		DE6359172AA4F68D00A6E997 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		DE6359182AA4F68D00A6E997 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		DE7660B32AC84D6C008FCAC4 /* CopySoundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopySoundsViewModel.swift; sourceTree = "<group>"; };
+		DE86C0EA2AC9EC5E0021B382 /* FormatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatsViewController.swift; sourceTree = "<group>"; };
+		DE86C0EC2AC9EE180021B382 /* ToggleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleTableViewCell.swift; sourceTree = "<group>"; };
+		DE86C0ED2AC9EE180021B382 /* ToggleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToggleTableViewCell.xib; sourceTree = "<group>"; };
 		DE88E97B2AA1432B0097C69F /* LaunchScreenIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenIcon.png; sourceTree = "<group>"; };
 		DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorViewController.swift; sourceTree = "<group>"; };
 		DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -370,6 +376,8 @@
 			children = (
 				DEE0EFAA2AC0678C000F71D1 /* SettingsTableViewCell.swift */,
 				DEE0EFAB2AC0678C000F71D1 /* SettingsTableViewCell.xib */,
+				DE86C0EC2AC9EE180021B382 /* ToggleTableViewCell.swift */,
+				DE86C0ED2AC9EE180021B382 /* ToggleTableViewCell.xib */,
 			);
 			path = SettingsScreenXibs;
 			sourceTree = "<group>";
@@ -381,6 +389,7 @@
 				DEE0EFB42AC0B769000F71D1 /* CommonWebViewViewController.swift */,
 				DE35C3002AC55B5D00B5F0A5 /* AppearanceViewController.swift */,
 				DE1C0C4D2AC728C30036FC9C /* CopySoundsViewController.swift */,
+				DE86C0EA2AC9EC5E0021B382 /* FormatsViewController.swift */,
 			);
 			path = SettingsControllers;
 			sourceTree = "<group>";
@@ -536,6 +545,7 @@
 				DEDCA9D72AA11FB40045AC81 /* Montserrat-Regular.ttf in Resources */,
 				DE1C0C562AC72F780036FC9C /* Message.mp3 in Resources */,
 				DE1C0C582AC72FD20036FC9C /* Cool.mp3 in Resources */,
+				DE86C0EF2AC9EE180021B382 /* ToggleTableViewCell.xib in Resources */,
 				DEE0EFAD2AC0678C000F71D1 /* SettingsTableViewCell.xib in Resources */,
 				DE1C0C4B2AC7288E0036FC9C /* Bell.mp3 in Resources */,
 				DEDCA9DD2AA11FDC0045AC81 /* Montserrat-ExtraBold.ttf in Resources */,
@@ -671,6 +681,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE86C0EB2AC9EC5E0021B382 /* FormatsViewController.swift in Sources */,
+				DE86C0EE2AC9EE180021B382 /* ToggleTableViewCell.swift in Sources */,
 				DE0F626B2915A6C3004E45DF /* ColorDeckViewController.swift in Sources */,
 				DED425C52A9EE0E500243A77 /* SwipeView.swift in Sources */,
 				DE6359192AA4F68D00A6E997 /* HistoryTableViewCell.swift in Sources */,

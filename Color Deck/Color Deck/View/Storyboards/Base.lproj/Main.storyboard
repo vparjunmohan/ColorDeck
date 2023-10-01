@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -208,16 +207,35 @@
             </objects>
             <point key="canvasLocation" x="1190" y="378"/>
         </scene>
-        <!--View Controller-->
+        <!--Formats View Controller-->
         <scene sceneID="gYk-ee-4GR">
             <objects>
-                <viewController id="cFL-YP-pWl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormatsViewController" id="cFL-YP-pWl" customClass="FormatsViewController" customModule="Color_Deck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dTi-kH-Tlg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="S3d-hE-ciu">
+                                <rect key="frame" x="0.0" y="63" width="414" height="799"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cFL-YP-pWl" id="Scv-mD-VCS"/>
+                                    <outlet property="delegate" destination="cFL-YP-pWl" id="y0F-Rw-pnY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vnS-Oa-w2w"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="S3d-hE-ciu" firstAttribute="top" secondItem="vnS-Oa-w2w" secondAttribute="top" constant="15" id="72v-Tf-V7a"/>
+                            <constraint firstItem="vnS-Oa-w2w" firstAttribute="bottom" secondItem="S3d-hE-ciu" secondAttribute="bottom" id="EUK-Sb-Zpk"/>
+                            <constraint firstItem="S3d-hE-ciu" firstAttribute="leading" secondItem="vnS-Oa-w2w" secondAttribute="leading" id="af0-cw-gKY"/>
+                            <constraint firstItem="vnS-Oa-w2w" firstAttribute="trailing" secondItem="S3d-hE-ciu" secondAttribute="trailing" id="vIi-Xo-8Sy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="formatsTableView" destination="S3d-hE-ciu" id="QGR-4N-FCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zL-5i-aaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -427,8 +445,5 @@
         <namedColor name="AppFontColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

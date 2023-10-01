@@ -48,7 +48,8 @@ class SettingsViewModel {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AppearanceViewController") as! AppearanceViewController
             navController?.pushViewController(vc, animated: true)
         case 1:
-            print("formats")
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FormatsViewController") as! FormatsViewController
+            navController?.pushViewController(vc, animated: true)
         case 2:
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CopySoundsViewController") as! CopySoundsViewController
             navController?.pushViewController(vc, animated: true)
