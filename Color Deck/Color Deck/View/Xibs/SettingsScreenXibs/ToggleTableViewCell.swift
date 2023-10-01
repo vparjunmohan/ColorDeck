@@ -21,12 +21,23 @@ class ToggleTableViewCell: UITableViewCell {
     }
     
     // MARK: - SETUP FORMATS CELL
-    func configCell(text: String) {
+    func configCell(index: Int, text: String, switchState: (Bool, Bool)) {
         self.contentLabel.text = text
+        self.toggleSwitch.onTintColor = UIColor(resource: .appColorScheme)
+        if text == "Use # prefix for hex codes" {
+            self.toggleSwitch.isOn = switchState.0
+        } else {
+            self.toggleSwitch.isOn = switchState.1
+        }
+        self.toggleSwitch.tag = index
     }
     
     // MARK: - ACTION
     @IBAction func switchTapped(_ sender: UISwitch) {
-        
+        if sender.tag == 0 {
+            UserDefaults.standard.set(sender.isOn, forKey: "prefixHexCodes")
+        } else {
+            UserDefaults.standard.set(sender.isOn, forKey: "hexLowerCase")
+        }
     }
 }

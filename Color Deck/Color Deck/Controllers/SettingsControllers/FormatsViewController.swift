@@ -14,8 +14,19 @@ class FormatsViewController: UIViewController {
     
     // MARK: - PROPERTIES
     let contentTexts = ["Use # prefix for hex codes", "Hex lowercase"]
+    var formatsViewModel: FormatsViewModel?
     
     // MARK: - LIFE CYCLE
+    init(vm: FormatsViewModel) {
+        self.formatsViewModel = vm
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.formatsViewModel = FormatsViewModel()
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configUI()
@@ -24,6 +35,10 @@ class FormatsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.showTabBar()
+    }
+    
+    deinit {
+        self.formatsViewModel = nil
     }
     
     // MARK: - CONFIG
@@ -44,7 +59,8 @@ extension FormatsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToggleTableViewCell", for: indexPath) as! ToggleTableViewCell
-        cell.configCell(text: self.contentTexts[indexPath.row])
+        guard let formatsViewModel else { return cell }
+        cell.configCell(index: indexPath.row, text: self.contentTexts[indexPath.row], switchState: formatsViewModel.fetchFormats())
         return cell
     }
     

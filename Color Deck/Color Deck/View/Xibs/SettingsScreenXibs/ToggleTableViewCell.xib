@@ -32,7 +32,7 @@
                                 <color key="textColor" name="AppFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFg-24-qoq">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cFg-24-qoq">
                                 <rect key="frame" x="243" y="16.666666666666671" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchTapped:" destination="KGk-i7-Jjw" eventType="valueChanged" id="gvc-JN-3bV"/>

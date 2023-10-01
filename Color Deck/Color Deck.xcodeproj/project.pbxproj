@@ -35,6 +35,7 @@
 		DE86C0EB2AC9EC5E0021B382 /* FormatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE86C0EA2AC9EC5E0021B382 /* FormatsViewController.swift */; };
 		DE86C0EE2AC9EE180021B382 /* ToggleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE86C0EC2AC9EE180021B382 /* ToggleTableViewCell.swift */; };
 		DE86C0EF2AC9EE180021B382 /* ToggleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE86C0ED2AC9EE180021B382 /* ToggleTableViewCell.xib */; };
+		DE86C0F12AC9FB8D0021B382 /* FormatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE86C0F02AC9FB8D0021B382 /* FormatsViewModel.swift */; };
 		DE88E97C2AA1432B0097C69F /* LaunchScreenIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE88E97B2AA1432B0097C69F /* LaunchScreenIcon.png */; };
 		DE9467EB291A16AD005DBA32 /* FavouriteColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */; };
 		DE9467EE291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */; };
@@ -112,6 +113,7 @@
 		DE86C0EA2AC9EC5E0021B382 /* FormatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatsViewController.swift; sourceTree = "<group>"; };
 		DE86C0EC2AC9EE180021B382 /* ToggleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleTableViewCell.swift; sourceTree = "<group>"; };
 		DE86C0ED2AC9EE180021B382 /* ToggleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToggleTableViewCell.xib; sourceTree = "<group>"; };
+		DE86C0F02AC9FB8D0021B382 /* FormatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatsViewModel.swift; sourceTree = "<group>"; };
 		DE88E97B2AA1432B0097C69F /* LaunchScreenIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreenIcon.png; sourceTree = "<group>"; };
 		DE9467EA291A16AD005DBA32 /* FavouriteColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorViewController.swift; sourceTree = "<group>"; };
 		DE9467EC291A1CAB005DBA32 /* FavouriteColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteColorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				DEE0EFAE2AC08238000F71D1 /* SettingsViewModel.swift */,
 				DEB387632AC60EDE00A76964 /* AppearanceViewModel.swift */,
 				DE7660B32AC84D6C008FCAC4 /* CopySoundsViewModel.swift */,
+				DE86C0F02AC9FB8D0021B382 /* FormatsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				DE7660B42AC84D6C008FCAC4 /* CopySoundsViewModel.swift in Sources */,
 				DEE0EFAC2AC0678C000F71D1 /* SettingsTableViewCell.swift in Sources */,
 				DE35C3012AC55B5D00B5F0A5 /* AppearanceViewController.swift in Sources */,
+				DE86C0F12AC9FB8D0021B382 /* FormatsViewModel.swift in Sources */,
 				DED425CE2A9F19D100243A77 /* FavoritesViewModel.swift in Sources */,
 				DED425C72A9F0FAB00243A77 /* Favorites.swift in Sources */,
 				DE1C0C4E2AC728C30036FC9C /* CopySoundsViewController.swift in Sources */,
