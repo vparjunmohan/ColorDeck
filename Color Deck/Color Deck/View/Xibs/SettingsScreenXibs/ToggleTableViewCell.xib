@@ -26,8 +26,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFR-TV-ubX">
                         <rect key="frame" x="15" y="5" width="307" height="64"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e15-Oa-PFV">
-                                <rect key="frame" x="12" y="22" width="44" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="e15-Oa-PFV">
+                                <rect key="frame" x="12" y="22" width="226" height="20"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                 <color key="textColor" name="AppFontColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,6 +43,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cFg-24-qoq" secondAttribute="trailing" constant="15" id="0FQ-Uc-6Wy"/>
                             <constraint firstItem="cFg-24-qoq" firstAttribute="centerY" secondItem="kFR-TV-ubX" secondAttribute="centerY" id="1Tr-mC-K4H"/>
+                            <constraint firstItem="cFg-24-qoq" firstAttribute="leading" secondItem="e15-Oa-PFV" secondAttribute="trailing" constant="5" id="QCw-We-wHP"/>
                             <constraint firstItem="e15-Oa-PFV" firstAttribute="centerY" secondItem="kFR-TV-ubX" secondAttribute="centerY" id="dwo-Xv-5KB"/>
                             <constraint firstItem="e15-Oa-PFV" firstAttribute="leading" secondItem="kFR-TV-ubX" secondAttribute="leading" constant="12" id="ffn-r9-tTb"/>
                         </constraints>

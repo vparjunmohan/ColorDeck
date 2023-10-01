@@ -46,7 +46,7 @@ class SettingsTableViewCell: UITableViewCell {
         self.versionLabel.isHidden = true
         self.titleImageView.isHidden = true
         self.titleImageViewWidth.constant = 0
-        self.contentLabelLeading.constant = 12
+        self.contentLabelLeading.constant = 0
         self.optionImageViewTrailing.constant = 15
     }
     
