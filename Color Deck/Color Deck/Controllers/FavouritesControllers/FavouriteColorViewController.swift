@@ -124,8 +124,9 @@ extension FavouriteColorViewController: FavouriteCollectionViewCellDelegate {
     func copyTapped(uuid: String) {
         guard let favoriteViewModel else { return }
         let colorCode = favoriteViewModel.retrieveColorCode(uuid: uuid)
-        UIPasteboard.general.string = colorCode
-        self.showAlert(message: "Copied color code \(colorCode)")
+        let formattedHexCode = favoriteViewModel.formatHexCode(copiedHex: colorCode)
+        UIPasteboard.general.string = formattedHexCode
+        self.showAlert(message: "Copied color code \(formattedHexCode)")
         favoriteViewModel.playCopySound()
     }
     

@@ -38,7 +38,7 @@ class FavouriteColorCollectionViewCell: UICollectionViewCell {
     // MARK: - HELPERS
     func setupCell(data: Favorites) {
         if data.isFavorite {
-            self.hexLabel.text = data.colorCode
+            self.hexLabel.text = String(data.colorCode.dropFirst())
             self.colorView.backgroundColor = UIColor(hexString: data.colorCode)
             self.removeButton.accessibilityIdentifier = data.uuid
             self.copyButton.accessibilityIdentifier = data.uuid
