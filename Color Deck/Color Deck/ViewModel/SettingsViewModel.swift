@@ -63,7 +63,9 @@ class SettingsViewModel {
             let vc = self.setupViewController(title: "Contact Us", url: "https://vparjunmohan.wixsite.com/colordeck/contact")
             navController?.pushViewController(vc, animated: true)
         case 6:
-            print("rate")
+            if let appLink = URL(string:"https://apps.apple.com/sa/app/color-deck/id6463396110") {
+              UIApplication.shared.open(appLink, options: [:], completionHandler: nil)
+            }
         default:
             break
         }
