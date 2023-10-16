@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 // MARK: - CGFloat
 extension CGFloat {
@@ -101,8 +102,8 @@ extension UIViewController {
     /// - Parameter backButtonTitle: Title in String
     func setupBackButton(backButtonTitle: String) {
         let button = UIButton(type: .custom)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
-        button.setImage(UIImage(named: "backButtonImage"), for: .normal)
+        button.titleLabel?.font = UIFont(name: "Montserrat-Black", size: 30)
+        button.setImage(UIImage(named: "backButtonIcon"), for: .normal)
         button.setTitleColor(UIColor.init(named: "AppFontColor"), for: .normal)
         button.setTitle(backButtonTitle, for: .normal)
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
@@ -184,4 +185,55 @@ extension UIViewController {
 // MARK: - Notification.Name
 extension Notification.Name {
     static let UpdateHeartButton = Notification.Name("UpdateHeartButton")
+}
+
+// MARK: - APP DELEGATE
+extension AppDelegate {
+    func setupAppTheme() {
+        if let selectedAppearance = UserDefaults.standard.object(forKey: "selectedAppearance") as? Int {
+            switch selectedAppearance {
+            case 0:
+                UIApplication.shared.connectedScenes
+                    .compactMap { $0 as? UIWindowScene }
+                    .flatMap { $0.windows }
+                    .forEach { $0.overrideUserInterfaceStyle = .light }
+            case 1:
+                UIApplication.shared.connectedScenes
+                    .compactMap { $0 as? UIWindowScene }
+                    .flatMap { $0.windows }
+                    .forEach { $0.overrideUserInterfaceStyle = .dark }
+            case 2:
+                UIApplication.shared.connectedScenes
+                    .compactMap { $0 as? UIWindowScene }
+                    .flatMap { $0.windows }
+                    .forEach { $0.overrideUserInterfaceStyle = .unspecified }
+            default:
+                break
+            }
+        } else {
+            UserDefaults.standard.set(2, forKey: "selectedAppearance")
+            UIApplication.shared.connectedScenes
+                .compactMap { $0 as? UIWindowScene }
+                .flatMap { $0.windows }
+                .forEach { $0.overrideUserInterfaceStyle = .unspecified }
+        }
+    }
+    
+    func configSelectedCopySound() {
+        DispatchQueue.global().async {
+            AUDIOPLAYERS.removeAll()
+            for fileName in AUDIOFILENAMES {
+                if let audioPath = Bundle.main.path(forResource: fileName, ofType: ".mp3") {
+                    if let audioPlayer = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath)) {
+                        AUDIOPLAYERS.append(audioPlayer)
+                    }
+                }
+            }
+        }
+        
+        guard let _ = UserDefaults.standard.object(forKey: "selectedCopySound") as? Int else {
+            UserDefaults.standard.set(0, forKey: "selectedCopySound")
+            return
+        }
+    }
 }

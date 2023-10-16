@@ -37,7 +37,7 @@ class FavoritesViewModel {
             if success {
                 self.favoriteColors.removeAll()
                 self.fetchAllFavorites()
-            } 
+            }
         }
     }
     
@@ -57,5 +57,31 @@ class FavoritesViewModel {
             data = favourites
         }
         return data
+    }
+    
+    // MARK: - PLAY SOUND FOR COPY
+    func playCopySound() {
+        if let savedSoundIndex = UserDefaults.standard.value(forKey: "selectedCopySound") as? Int {
+            if savedSoundIndex != 0 {
+                let audioIndex = savedSoundIndex - 1
+                AUDIOPLAYERS[audioIndex].play()
+            }
+        }
+    }
+    
+    // MARK: - FORMAT COPIED HEX
+    func formatHexCode(copiedHex: String) -> String {
+        var formattedHex = copiedHex
+        var hasPrefix = false
+        var isLowerCased = false
+        if let prefixHexCodes = UserDefaults.standard.object(forKey: "prefixHexCodes") as? Bool {
+            hasPrefix = prefixHexCodes
+        }
+        if let hexLower = UserDefaults.standard.object(forKey: "hexLowerCase") as? Bool {
+            isLowerCased = hexLower
+        }
+        formattedHex = hasPrefix ? copiedHex : String(copiedHex.dropFirst())
+        formattedHex = isLowerCased ? formattedHex.lowercased() : formattedHex.uppercased()
+        return formattedHex
     }
 }

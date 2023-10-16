@@ -45,6 +45,7 @@ class FavouriteColorViewController: UIViewController {
     
     // MARK: - CONFIG
     private func configUI(){
+        self.setupTheme()
         self.setupNavigation(title: "Favourites")
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -66,9 +67,9 @@ class FavouriteColorViewController: UIViewController {
         if #available(iOS 17.0, *) {
             self.noColorLabel.isHidden = true
             var config = UIContentUnavailableConfiguration.empty()
-            config.image = UIImage(systemName: "heart.fill")
+            config.image = UIImage(systemName: "heart")
             config.imageProperties.tintColor = UIColor(resource: .appColorScheme)
-            config.text = "No Favourites found"
+            config.text = "No favourites found"
             config.secondaryText = "Your favourite colors will appear here"
             self.contentUnavailableConfiguration = config
         } else {
@@ -123,8 +124,10 @@ extension FavouriteColorViewController: FavouriteCollectionViewCellDelegate {
     func copyTapped(uuid: String) {
         guard let favoriteViewModel else { return }
         let colorCode = favoriteViewModel.retrieveColorCode(uuid: uuid)
-        UIPasteboard.general.string = colorCode
-        self.showAlert(message: "Copied color code \(colorCode)")
+        let formattedHexCode = favoriteViewModel.formatHexCode(copiedHex: colorCode)
+        UIPasteboard.general.string = formattedHexCode
+        self.showAlert(message: "Copied color code \(formattedHexCode)")
+        favoriteViewModel.playCopySound()
     }
     
     func removeTapped(uuid: String) {
