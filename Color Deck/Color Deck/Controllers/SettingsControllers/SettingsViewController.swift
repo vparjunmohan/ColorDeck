@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var settingsTableView: UITableView!
     
     // MARK: - PROPERTIES
-    let contents: [String] = ["Appearance", "Formats", "Copy Sound", "Website", "Privacy Policy", "Contact Us", "Rate App", "Version"]
+    let contents: [String] = ["Appearance", "Formats", "Copy Sound", "Website", "Privacy Policy", "Contact Us", "Rate App", "Share App", "Version"]
     var viewModel: SettingsViewModel?
     
     // MARK: - LIFE CYCLE
@@ -70,6 +70,6 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewModel else { return }
-        viewModel.setupCellNavigation(forRow: indexPath.row, navController: self.navigationController)
+        viewModel.setupCellNavigation(forRow: indexPath.row, navController: self.navigationController, controller: self)
     }
 }
