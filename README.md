@@ -1,11 +1,9 @@
 # Color Deck
 ## Random color generator
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 Color Deck is a free random color generator iOS application that allows you to pick and make a collection of your favourite colors. SQLite database is used to store the color data of your favourite colors.
 
-![colordeck](https://user-images.githubusercontent.com/62532677/200645992-88044b3f-26fc-4082-b203-3e4b9efc00e2.png)
+![Untitled design](https://github.com/vparjunmohan/ColorDeck/assets/62532677/5fdeae92-c094-43f6-867c-233d052dd380)
 
 ## Features
 
