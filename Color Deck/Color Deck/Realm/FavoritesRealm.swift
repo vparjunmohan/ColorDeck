@@ -9,7 +9,8 @@ import Foundation
 import RealmSwift
 
 class FavoritesRealm: NSObject {
-    let realm = try! Realm(configuration: Realm.Configuration(schemaVersion: REALMSCHEMEVERSION))
+    // MARK: - PROPERTIES
+    private let realm = try! Realm(configuration: Realm.Configuration(schemaVersion: REALMSCHEMEVERSION))
     
     // MARK: - SEND NEW DATA TO REALM
     func addColorToFavorites(info: NSDictionary) {
@@ -79,6 +80,25 @@ class FavoritesRealm: NSObject {
             completion(colorHistory)
         } else {
             completion(nil)
+        }
+    }
+    
+    // MARK: - DELETE COLOR DATA
+    func deleteMyColorData(completion: (String) -> Void) {
+        let data = realm.objects(Favorites.self)
+        if !data.isEmpty {
+            data.forEach { favourite in
+                do {
+                    try realm.write {
+                        realm.delete(favourite)
+                    }
+                } catch let err {
+                    completion(err.localizedDescription)
+                }
+            }
+            completion("Color Data Deleted")
+        } else {
+            completion("No Color Data Found")
         }
     }
 }

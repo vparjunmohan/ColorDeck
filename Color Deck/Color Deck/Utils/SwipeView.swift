@@ -49,6 +49,7 @@ class SwipeView: UIView {
         self.addCornerRadius(radius: 10)
         self.accessibilityIdentifier = UUID().uuidString
         NotificationCenter.default.addObserver(self, selector: #selector(updateHeartButton(_:)), name: .UpdateHeartButton, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(clearHeartButton(_:)), name: .ClearHeartButton, object: nil)
     }
     
     private func setRandomBackgroundColor() {
@@ -143,6 +144,13 @@ class SwipeView: UIView {
                     heartButton.setBackgroundImage(UIImage(systemName: "heart.fill"), for: .normal)
                 }
             }
+        }
+    }
+    
+    @objc func clearHeartButton(_ notification: Notification) {
+        if heartButton.isSelected {
+            heartButton.isSelected = false
+            heartButton.setBackgroundImage(UIImage(systemName: "heart"), for: .normal)
         }
     }
 }

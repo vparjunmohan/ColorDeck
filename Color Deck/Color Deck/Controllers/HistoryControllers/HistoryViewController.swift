@@ -17,7 +17,7 @@ class HistoryViewController: UIViewController {
     private let cellIdentifier = "HistoryTableViewCell"
     var historyColors: [Favorites] = []
     var historyViewModel: HistoryViewModel?
-    let favoritesRealm = FavoritesRealm()
+    private let favoritesRealm = FavoritesRealm()
     
     // MARK: - LIFE CYCLE
     init(viewModel: HistoryViewModel) {

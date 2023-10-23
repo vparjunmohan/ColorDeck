@@ -8,7 +8,19 @@
 import Foundation
 import UIKit
 
+protocol SettingsDelegate: AnyObject {
+    func displayAlert(withMessage: String)
+}
+
 class SettingsViewModel {
+    // MARK: - PROPERTIES
+    private let favoritesRealm: FavoritesRealm
+    weak var delegate: SettingsDelegate?
+    
+    // MARK: - LIFE CYCLE
+    init(favoritesRealm: FavoritesRealm) {
+        self.favoritesRealm = favoritesRealm
+    }
     
     //MARK: - GET IMAGES FOR THE CELL
     /// Function used to retrieve the image for Settings TableView cell
@@ -32,6 +44,8 @@ class SettingsViewModel {
             return UIImage(resource: .rateIcon)
         case "Share App":
             return UIImage(resource: .shareIcon)
+        case "Delete Color Data":
+            return UIImage(resource: .deleteIcon)
         case "Version":
             return UIImage(resource: .versionIcon)
         default:
@@ -70,6 +84,8 @@ class SettingsViewModel {
             }
         case 7:
             self.shareApp(controller: controller)
+        case 8:
+            self.deleteMyColorData()
         default:
             break
         }
@@ -89,6 +105,8 @@ class SettingsViewModel {
     }
     
     //MARK: - SHARE APP
+    /// Function used to config share app
+    /// - Parameter controller: UIViewController on which UIActivityViewController will be presented
     private func shareApp(controller: UIViewController) {
         let textToShare = "Check out this amazing app!"
         let appURL = URL(string: APPURL)
@@ -106,5 +124,12 @@ class SettingsViewModel {
             popoverPresentationController.permittedArrowDirections = []
         }
         controller.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    //MARK: - DELETE COLOR DATA
+    private func deleteMyColorData() {
+        self.favoritesRealm.deleteMyColorData { message in
+            delegate?.displayAlert(withMessage: message)
+        }
     }
 }

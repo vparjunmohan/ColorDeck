@@ -16,7 +16,7 @@ class FavouriteColorViewController: UIViewController {
     // MARK: - PROPERTIES
     var favouriteColors: [Favorites] = []
     var favoriteViewModel: FavoritesViewModel?
-    let favoritesRealm = FavoritesRealm()
+    private let favoritesRealm = FavoritesRealm()
     
     // MARK: - LIFE CYCLE
     init(viewModel: FavoritesViewModel) {

@@ -8,10 +8,11 @@
 import Foundation
 
 class FavoritesViewModel {
-    
+    // MARK: - PROPERTIES
     private let favoritesRealm: FavoritesRealm
     private var favoriteColors: [Favorites] = []
     
+    // MARK: - LIFE CYCLE
     init(favoritesRealm: FavoritesRealm) {
         self.favoritesRealm = favoritesRealm
     }
