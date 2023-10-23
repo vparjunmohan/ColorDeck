@@ -85,7 +85,7 @@ class SettingsViewModel {
         case 7:
             self.shareApp(controller: controller)
         case 8:
-            self.deleteMyColorData()
+            self.displayDeleteConfirmationAlert(controller: controller)
         default:
             break
         }
@@ -127,9 +127,36 @@ class SettingsViewModel {
     }
     
     //MARK: - DELETE COLOR DATA
+    /// Function is used to delete/clear whole color data from the database
     private func deleteMyColorData() {
         self.favoritesRealm.deleteMyColorData { message in
             delegate?.displayAlert(withMessage: message)
         }
+    }
+    
+    /// Function is used to display confirmation alert controlelr to the user
+    /// - Parameter controller: UIViewController on which UIActivityViewController will be presented
+    private func displayDeleteConfirmationAlert(controller: UIViewController) {
+        let alertController = UIAlertController(
+            title: "",
+            message: "Are you sure you want to delete your color data? This action cannot be undone.",
+            preferredStyle: .alert
+        )
+        
+        let cancelAction = UIAlertAction(
+            title: "Cancel",
+            style: .default,
+            handler: nil
+        )
+        
+        let deleteAction = UIAlertAction(
+            title: "Delete",
+            style: .destructive) { [weak self] _ in
+                guard let self else { return }
+                self.deleteMyColorData()
+            }
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteAction)
+        controller.present(alertController, animated: true, completion: nil)
     }
 }
