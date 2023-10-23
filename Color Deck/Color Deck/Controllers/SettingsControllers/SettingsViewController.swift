@@ -13,8 +13,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var settingsTableView: UITableView!
     
     // MARK: - PROPERTIES
-    let contents: [String] = ["Appearance", "Formats", "Copy Sound", "Website", "Privacy Policy", "Contact Us", "Rate App", "Version"]
+    let contents: [String] = ["Appearance", "Formats", "Copy Sound", "Website", "Privacy Policy", "Contact Us", "Rate App", "Share App", "Delete Color Data", "Version"]
     var viewModel: SettingsViewModel?
+    private let favoritesRealm = FavoritesRealm()
     
     // MARK: - LIFE CYCLE
     init(vm: SettingsViewModel) {
@@ -23,7 +24,7 @@ class SettingsViewController: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        self.viewModel = SettingsViewModel()
+        self.viewModel = SettingsViewModel(favoritesRealm: self.favoritesRealm)
         super.init(coder: coder)
     }
     
@@ -39,6 +40,8 @@ class SettingsViewController: UIViewController {
     
     // MARK: - CONFIG
     private func configUI() {
+        guard let viewModel else { return }
+        viewModel.delegate = self
         self.setupTheme()
         self.setupNavigation(title: "Settings")
     }
@@ -70,6 +73,15 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewModel else { return }
-        viewModel.setupCellNavigation(forRow: indexPath.row, navController: self.navigationController)
+        viewModel.setupCellNavigation(forRow: indexPath.row, navController: self.navigationController, controller: self)
+    }
+}
+
+// MARK: - UITABLEVIEW DELEGATE
+extension SettingsViewController: SettingsDelegate {
+    
+    func displayAlert(withMessage: String) {
+        self.showAlert(message: withMessage)
+        NotificationCenter.default.post(name: .ClearHeartButton, object: nil, userInfo: nil)
     }
 }

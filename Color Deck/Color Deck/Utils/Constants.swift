@@ -10,6 +10,7 @@ import AVFoundation
 
 let REALMSCHEMEVERSION : UInt64 = 2 //UPDATE THIS VERSION WHEN THERE IS CHANGE IN REALM DB OBJECTS
 let APPNAME = "Color Deck"
-var APPVERSION = "1.3"
+var APPVERSION = "1.4"
+let APPURL = "https://apps.apple.com/in/app/color-deck/id6463396110"
 let AUDIOFILENAMES = ["None", "Bell", "Cool", "Message", "Pop", "Soft"]
 var AUDIOPLAYERS: [AVAudioPlayer] = []

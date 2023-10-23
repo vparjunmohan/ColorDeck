@@ -185,6 +185,7 @@ extension UIViewController {
 // MARK: - Notification.Name
 extension Notification.Name {
     static let UpdateHeartButton = Notification.Name("UpdateHeartButton")
+    static let ClearHeartButton = Notification.Name("ClearHeartButton")
 }
 
 // MARK: - APP DELEGATE
